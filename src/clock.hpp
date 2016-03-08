@@ -1,4 +1,5 @@
-#pragma once
+#ifndef HPP_CLOCK
+#define HPP_CLOCK
 
 #include <chrono>
 #include <iostream>
@@ -61,23 +62,12 @@ class clock::duration {
 		duration operator%(const int rhs) const;
 		duration operator%(const clock::duration& rhs) const;
 
-		friend clock::time_stamp& operator+=(clock::time_stamp& lhs, const
-			clock::duration& d);
-
-		friend clock::time_stamp& operator-=(clock::time_stamp& lhs, const
-			clock::duration& d);
-
-		friend clock::time_stamp operator+(const clock::time_stamp& lhs,
-			const clock::duration& rhs);
-
-		friend clock::time_stamp operator-(const clock::time_stamp& lhs,
-			const clock::duration& rhs);
-
-		friend clock::time_stamp operator+(const clock::duration& lhs, const
-			clock::time_stamp& rhs);
-
-		friend std::ostream& operator<<(std::ostream &s, const
-			clock::duration& rhs);
+		friend clock::time_stamp& operator+=(clock::time_stamp& lhs, const clock::duration& d);
+		friend clock::time_stamp& operator-=(clock::time_stamp& lhs, const clock::duration& d);
+		friend clock::time_stamp operator+(const clock::time_stamp& lhs, const clock::duration& rhs);
+		friend clock::time_stamp operator-(const clock::time_stamp& lhs, const clock::duration& rhs);
+		friend clock::time_stamp operator+(const clock::duration& lhs, const clock::time_stamp& rhs);
+		friend std::ostream& operator<<(std::ostream &s, const clock::duration& rhs);
 };
 	
 class clock::time_stamp {
@@ -109,7 +99,7 @@ class clock::time_stamp {
 		bool operator>=(const clock::time_stamp& rhs) const;
 		
 		clock::duration operator-(const clock::time_stamp& rhs) const;
-		
+
 		friend clock::time_stamp& operator+=(clock::time_stamp& lhs, const clock::duration& d);
 		friend clock::time_stamp& operator-=(clock::time_stamp& lhs, const clock::duration& d);
 		friend clock::time_stamp operator+(const clock::time_stamp& lhs, const clock::duration& rhs);
@@ -126,3 +116,5 @@ clock::time_stamp operator+(const clock::duration& lhs, const clock::time_stamp&
 	
 std::ostream & operator<<(std::ostream & s, const clock::duration & rhs);
 std::ostream & operator<<(std::ostream & s, const clock::time_stamp &rhs);
+
+#endif

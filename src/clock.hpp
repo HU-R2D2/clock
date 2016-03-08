@@ -66,29 +66,17 @@ class clock::duration {
 
 		duration operator%(const clock::duration& rhs) const;
 
-		friend clock::time_stamp& operator+=(clock::time_stamp& lhs, const
+		friend clock::time_stamp& operator+=(clock::time_stamp& lhs, const clock::duration& d);
 
-			clock::duration& d);
+		friend clock::time_stamp& operator-=(clock::time_stamp& lhs, const clock::duration& d);
 
-		friend clock::time_stamp& operator-=(clock::time_stamp& lhs, const
+		friend clock::time_stamp operator+(const clock::time_stamp& lhs, const clock::duration& rhs);
 
-			clock::duration& d);
+		friend clock::time_stamp operator-(const clock::time_stamp& lhs, const clock::duration& rhs);
 
-		friend clock::time_stamp operator+(const clock::time_stamp& lhs,
+		friend clock::time_stamp operator+(const clock::duration& lhs, const clock::time_stamp& rhs);
 
-			const clock::duration& rhs);
-
-		friend clock::time_stamp operator-(const clock::time_stamp& lhs,
-
-			const clock::duration& rhs);
-
-		friend clock::time_stamp operator+(const clock::duration& lhs, const
-
-			clock::time_stamp& rhs);
-
-		friend std::ostream& operator<<(std::ostream &s, const
-
-			clock::duration& rhs);
+		friend std::ostream& operator<<(std::ostream &s, const clock::duration& rhs);
 }
 	
 class clock::time_stamp {

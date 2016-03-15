@@ -20,29 +20,34 @@ clock::duration::duration(const std::chrono::duration<long, std::micro>& arg) {
 
 }
 
-
-const clock::duration& clock::duration::operator+=(const duration& d) {
-
+const clock::duration& clock::duration::operator+=(const duration &d) {
+	m_duration += d.m_duration;
+	return m_duration;
 }
 
-const clock::duration & clock::duration::operator-=(const duration & d) {
-
+const clock::duration& clock::duration::operator-=(const duration &d) {
+	m_duration -= d.m_duration;
+	return m_duration;
 }
 
 const clock::duration& clock::duration::operator*=(const int rhs) {
-
+	m_duration = m_duration * rhs;
+	return m_duration;
 }
 
 const clock::duration& clock::duration::operator/=(const int rhs) {
-
+	m_duration = m_duration / rhs;
+	return m_duration;
 }
 
 const clock::duration& clock::duration::operator%=(const int rhs) {
-
+	m_duration = m_duration % rhs;
+	return m_duration;
 }
 
-const clock::duration& clock::duration::operator%=(const duration& rhs) {
-
+const clock::duration& clock::duration::operator%=(const duration &rhs) {
+	m_duration = m_duration % rhs.m_duration;
+	return m_duration;
 }
 
 bool clock::duration::operator==(const duration & rhs) const {

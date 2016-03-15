@@ -45,8 +45,6 @@ const clock::duration& clock::duration::operator%=(const duration& rhs) {
 
 }
 
-
-
 bool clock::duration::operator==(const duration & rhs) const {
 
 	return this->m_duration == rhs.m_duration;
@@ -73,39 +71,29 @@ bool clock::duration::operator>=(const duration & rhs) const {
 }
 
 clock::duration clock::duration::operator+(const clock::duration & rhs) const {
-	duration d;
-	d.m_duration = this->m_duration + rhs.m_duration;
-	return d;
+	return this->m_duration + rhs.m_duration;
 }
 
 clock::duration clock::duration::operator-(const clock::duration & rhs) const {
-	duration d;
-	d.m_duration = this->m_duration - rhs.m_duration;
-	return d;
+	//duration d;
+	//d.m_duration = this->m_duration - rhs.m_duration;
+	return this->m_duration - rhs.m_duration;
 }
 
 clock::duration clock::duration::operator*(const int rhs) const {
-	duration d;
-	d.m_duration = this->m_duration * rhs;
-	return d;
+	return this->m_duration * rhs;
 }
 
 clock::duration clock::duration::operator/(const int rhs) const {
-	duration d;
-	d.m_duration = this->m_duration / rhs;
-	return d;
+	return this->m_duration / rhs;
 }
 
 clock::duration clock::duration::operator%(const int rhs) const {
-	duration d;
-	d.m_duration = this->m_duration % rhs;
-	return d;
+	return this->m_duration % rhs;
 }
 
 clock::duration clock::duration::operator%(const clock::duration & rhs) const {
-	duration d;
-	d.m_duration = this->m_duration % rhs.m_duration;
-	return d;
+	return this->m_duration % rhs.m_duration;
 }
 
 /*clock::time_stamp& operator+=(clock::time_stamp& lhs, const clock::duration& d) {
@@ -144,9 +132,6 @@ clock::time_stamp::time_stamp(const std::chrono::time_point<std::chrono::high_re
 
 }
 
-bool clock::duration::operator>=(const duration & rhs) const {
-	return this->m_duration >= rhs.m_duration;
-}
 
 bool clock::time_stamp::operator==(const clock::time_stamp& rhs) const {
 	return this->m_time_stamp == rhs.m_time_stamp;

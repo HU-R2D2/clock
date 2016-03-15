@@ -166,7 +166,6 @@ std::ostream & operator<<(std::ostream & s, const clock::duration & rhs) {
 
 std::ostream & operator<<(std::ostream & s, const clock::time_stamp &rhs) {
 	std::chrono::milliseconds ms = std::chrono::duration_cast<std::chrono::milliseconds>(rhs.m_time_stamp.time_since_epoch());
-	std::chrono::seconds sec = std::chrono::duration_cast<std::chrono::seconds>(ms);
-	s << sec.count();
+	s << ms.count();
 	return s;
 }

@@ -13,11 +13,11 @@ clock::time_stamp clock::get_current_time()
 //============================================================================================================
 
 clock::duration::duration() {
-
+	this->m_duration = std::chrono::microseconds(0);
 }
 
 clock::duration::duration(const std::chrono::duration<long, std::micro>& arg) {
-
+	this->m_duration = arg;
 }
 
 const clock::duration& clock::duration::operator+=(const duration &d) {
@@ -51,7 +51,6 @@ const clock::duration& clock::duration::operator%=(const duration &rhs) {
 }
 
 bool clock::duration::operator==(const duration & rhs) const {
-
 	return this->m_duration == rhs.m_duration;
 }
 
@@ -80,8 +79,6 @@ clock::duration clock::duration::operator+(const clock::duration & rhs) const {
 }
 
 clock::duration clock::duration::operator-(const clock::duration & rhs) const {
-	//duration d;
-	//d.m_duration = this->m_duration - rhs.m_duration;
 	return this->m_duration - rhs.m_duration;
 }
 
@@ -106,11 +103,11 @@ clock::duration clock::duration::operator%(const clock::duration & rhs) const {
 //============================================================================================================
 
 clock::time_stamp::time_stamp() {
-
+	this->m_time_stamp = std::chrono::high_resolution_clock::now();
 }
 
 clock::time_stamp::time_stamp(const std::chrono::time_point<std::chrono::high_resolution_clock>& arg) {
-
+	this->m_time_stamp = arg;
 }
 
 
@@ -135,7 +132,7 @@ bool clock::time_stamp::operator>=(const clock::time_stamp& rhs) const {
 
 
 clock::duration clock::time_stamp::operator-(const clock::time_stamp& rhs) const {
-
+	return std::chrono::duration_cast<std::chrono::microseconds>(this->m_time_stamp - rhs.m_time_stamp);
 }
 
 //============================================================================================================

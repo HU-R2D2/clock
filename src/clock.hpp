@@ -23,7 +23,7 @@ class clock::duration {
 
 	private: /* Members */
 
-		std::chrono::duration<long, std::micro> m_duration;
+		std::chrono::duration<long, std::micro> m_duration; 
 
 	public: /* Constructors */
 

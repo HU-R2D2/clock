@@ -1,5 +1,11 @@
+#include "gtest/gtest.h"
 #include "clock.hpp"
 
-int main() {
-	return 0;
+TEST(Clock, get_current_time){
+	EXPECT_EQ(clock::get_current_time(), std::chrono::high_resolution_clock::now());
+}
+
+int main(int ac, char* av[]) {
+	::testing::InitGoogleTest(&ac, av);
+ 	return RUN_ALL_TESTS();
 }

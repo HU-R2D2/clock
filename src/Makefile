@@ -26,11 +26,11 @@ USER_DIR = .
 CPPFLAGS += -isystem  $(GTEST_DIR)/include
 
 # Flags passed to the C++ compiler.
-CXXFLAGS += -g -Wall -Wextra -pthread
+CXXFLAGS += -std=gnu++11 -g -Wall -Wextra -pthread
 
 # All tests produced by this Makefile.  Remember to add new tests you
 # created to the list.
-TESTS = test
+TESTS = clock_test
 
 # All Google Test headers.  Usually you shouldn't change this
 # definition.
@@ -80,4 +80,16 @@ sample1_unittest.o : $(USER_DIR)/sample1_unittest.cc \
 	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -c $(USER_DIR)/sample1_unittest.cc
 
 sample1_unittest : sample1.o sample1_unittest.o gtest_main.a
+	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -lpthread $^ -o $@
+
+
+# Builds test for clock.
+clock.o : $(USER_DIR)/clock.cpp $(USER_DIR)/clock.hpp $(GTEST_HEADERS)
+	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -c $(USER_DIR)/clock.cpp
+
+clock_test.o : $(USER_DIR)/test.cpp \
+                     $(GTEST_HEADERS)
+	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -c $(USER_DIR)/test.cpp
+
+clock_test : clock.o test.o gtest_main.a
 	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -lpthread $^ -o $@

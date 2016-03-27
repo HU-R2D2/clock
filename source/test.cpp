@@ -1,5 +1,5 @@
-#include "gtest/gtest.h"
-#include "clock.hpp"
+#include "gtest\gtest.h"
+#include "..\source\include\clock.hpp"
 
 TEST(Clock, get_current_time){
 	EXPECT_EQ(clock::get_current_time(), std::chrono::high_resolution_clock::now());

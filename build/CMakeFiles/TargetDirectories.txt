@@ -1,0 +1,5 @@
+D:/School/R2D2/clock/build/CMakeFiles/clock_test.dir
+D:/School/R2D2/clock/build/CMakeFiles/gtest.dir
+D:/School/R2D2/clock/build/CMakeFiles/gtest_main.dir
+D:/School/R2D2/clock/build/CMakeFiles/edit_cache.dir
+D:/School/R2D2/clock/build/CMakeFiles/rebuild_cache.dir

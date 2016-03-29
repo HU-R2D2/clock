@@ -1,3 +1,4 @@
+#include <iostream>
 #include "gtest\gtest.h"
 #include "..\source\include\clock.hpp"
 
@@ -8,68 +9,43 @@
 TEST(AddAssign, ConstDuration) {
 	clock::duration a = clock::duration(std::chrono::duration<long, std::micro>(10));
 	clock::duration b = clock::duration(std::chrono::duration<long, std::micro>(10));
-	
+	clock::duration c = clock::duration(std::chrono::duration<long, std::micro>(20));
+
 	a += b;
 	
-	ASSERT_TRUE(a == std::chrono::duration<long, std::micro>(20));
+	EXPECT_EQ(a , c);
 }
 
-TEST(RemoveAssign, ConstDuration) {
+TEST(SubstractAssign, ConstDuration) {
 	clock::duration a = clock::duration(std::chrono::duration<long, std::micro>(20));
 	clock::duration b = clock::duration(std::chrono::duration<long, std::micro>(10));
-	
+	clock::duration c = clock::duration(std::chrono::duration<long, std::micro>(10));
+
 	a -= b;
 	
-	ASSERT_TRUE(a == std::chrono::duration<long, std::micro>(10));
-	ASSERT_TRUE(b == std::chrono::duration<long, std::micro>(10));
+	EXPECT_EQ(a , c);
 }
 
 TEST(MultiplyAssign, ConstInt) {
 	clock::duration a = clock::duration(std::chrono::duration<long, std::micro>(5));
+	clock::duration b = clock::duration(std::chrono::duration<long, std::micro>(10));
+	clock::duration c = clock::duration(std::chrono::duration<long, std::micro>(5));
 	
 	a *= 2;
 	
-	ASSERT_TRUE(a == std::chrono::duration<long, std::micro>(10));
-	ASSERT_TRUE(a != std::chrono::duration<long, std::micro>(5));
+	EXPECT_EQ(a , b);
+	EXPECT_NE(a , c);
 }
 
 TEST(DivideAssign, ConstInt) {
 	clock::duration a = clock::duration(std::chrono::duration<long, std::micro>(10));
-	
+	clock::duration b = clock::duration(std::chrono::duration<long, std::micro>(10));
+	clock::duration c = clock::duration(std::chrono::duration<long, std::micro>(5));
+
 	a /= 2;
 	
-	ASSERT_TRUE(a == std::chrono::duration<long, std::micro>(5));
-	ASSERT_TRUE(a != std::chrono::duration<long, std::micro>(10));
-}
-
-TEST(ModuloAssign, ConstInt) {
-	clock::duration a = clock::duration(std::chrono::duration<long, std::micro>(10));
-	
-	a %= 3;
-	
-	ASSERT_TRUE(a == 1);
-	ASSERT_TRUE(a != std::chrono::duration<long, std::micro>(10));
-	
-	a %= 2;
-	
-	ASSERT_TRUE(a == 0);
-	ASSERT_TRUE(a != std::chrono::duration<long, std::micro>(10));
-}
-
-TEST(ModuloAssign, ConstDuration) {
-	clock::duration a = clock::duration(std::chrono::duration<long, std::micro>(10));
-	clock::duration b = clock::duration(std::chrono::duration<long, std::micro>(3));
-	clock::duration c = clock::duration(std::chrono::duration<long, std::micro>(2));
-	
-	a %= b;
-	
-	ASSERT_TRUE(a == 1);
-	ASSERT_TRUE(a != std::chrono::duration<long, std::micro>(10));
-	
-	a %= c;
-	
-	ASSERT_TRUE(a == 0);
-	ASSERT_TRUE(a != std::chrono::duration<long, std::micro>(10));
+	EXPECT_EQ(a , c);
+	EXPECT_NE(a , b);
 }
 
 TEST(IsEqualDuration, Constduration) {
@@ -77,145 +53,117 @@ TEST(IsEqualDuration, Constduration) {
 	clock::duration b = clock::duration(std::chrono::duration<long, std::micro>(10));
 	clock::duration c = clock::duration(std::chrono::duration<long, std::micro>(20));
 	
-	EXPECT_EQ(a == b); // True
-	EXPECT_FALSE(a == c); // True because a == c is false
+	EXPECT_TRUE(a == b);
+	EXPECT_FALSE(a == c);
 }
 
 TEST(IsNotEqualDuration, Constduration) {
 	clock::duration a = clock::duration(std::chrono::duration<long, std::micro>(10));
 	clock::duration b = clock::duration(std::chrono::duration<long, std::micro>(5));
+	clock::duration c = clock::duration(std::chrono::duration<long, std::micro>(10));
 	
-	ASSERT_TRUE(a != b);
-	ASSERT_FALSE(a == b);
+	EXPECT_TRUE(a != b);
+	EXPECT_FALSE(a != c);
 }
 
 TEST(LessThanDuration, Constduration) {
 	clock::duration a = clock::duration(std::chrono::duration<long, std::micro>(5));
 	clock::duration b = clock::duration(std::chrono::duration<long, std::micro>(10));
+	clock::duration c = clock::duration(std::chrono::duration<long, std::micro>(15));
 	
-	ASSERT_TRUE(a < b);
-	ASSERT_FALSE(a > b);
+	EXPECT_TRUE(b < c);
+	EXPECT_FALSE(b < a);
 }
 
 TEST(LessOrEqualDuration, Constduration) {
 	clock::duration a = clock::duration(std::chrono::duration<long, std::micro>(5));
-	clock::duration b = clock::duration(std::chrono::duration<long, std::micro>(5));
-	clock::duration c = clock::duration(std::chrono::duration<long, std::micro>(4));
-	
-	ASSERT_TRUE(a <= b);
-	ASSERT_TRUE(c <= a);
+	clock::duration b = clock::duration(std::chrono::duration<long, std::micro>(10));
+	clock::duration c = clock::duration(std::chrono::duration<long, std::micro>(15));
+
+	EXPECT_TRUE(b <= c);
+	EXPECT_TRUE(b <= b);
+	EXPECT_FALSE(b <= a);
 }
 
 TEST(GreaterThanDuration, Constduration) {
-	clock::duration a = clock::duration(std::chrono::duration<long, std::micro>(10));
-	clock::duration b = clock::duration(std::chrono::duration<long, std::micro>(5));
-	
-	ASSERT_TRUE(a > b);
-	ASSERT_FALSE(a < b);
+	clock::duration a = clock::duration(std::chrono::duration<long, std::micro>(5));
+	clock::duration b = clock::duration(std::chrono::duration<long, std::micro>(10));
+	clock::duration c = clock::duration(std::chrono::duration<long, std::micro>(15));
+
+	EXPECT_TRUE(b > a);
+	EXPECT_FALSE(b > c);
 }
 
 TEST(GreaterOrEqualDuration, Constduration) {
 	clock::duration a = clock::duration(std::chrono::duration<long, std::micro>(5));
-	clock::duration b = clock::duration(std::chrono::duration<long, std::micro>(5));
-	clock::duration c = clock::duration(std::chrono::duration<long, std::micro>(6));
-	
-	ASSERT_TRUE(a >= b);
-	ASSERT_TRUE(c >= a);
+	clock::duration b = clock::duration(std::chrono::duration<long, std::micro>(10));
+	clock::duration c = clock::duration(std::chrono::duration<long, std::micro>(15));
+
+	EXPECT_TRUE(b >= a);
+	EXPECT_TRUE(b >= b);
+	EXPECT_FALSE(b >= c);
 }
 
 TEST(AddDuration, ConstClock) {
 	clock::duration a = clock::duration(std::chrono::duration<long, std::micro>(5));
 	clock::duration b = clock::duration(std::chrono::duration<long, std::micro>(5));
+	clock::duration c = clock::duration(std::chrono::duration<long, std::micro>(10));
+
+	clock::duration d = a + b;
 	
-	clock::duration c = a + b;
-	
-	ASSERT_TRUE(c == std::chrono::duration<long, std::micro>(10));
-	ASSERT_TRUE(a == std::chrono::duration<long, std::micro>(5));
-	ASSERT_TRUE(b == std::chrono::duration<long, std::micro>(5));
+	EXPECT_EQ(d , c);
 }
 
-TEST(RemoveDuration, ConstClock) {
+TEST(SubstractDuration, ConstClock) {
 	clock::duration a = clock::duration(std::chrono::duration<long, std::micro>(10));
 	clock::duration b = clock::duration(std::chrono::duration<long, std::micro>(5));
+	clock::duration c = clock::duration(std::chrono::duration<long, std::micro>(5));
 	
-	clock::duration c = a - b;
+	clock::duration d = a - b;
 	
-	ASSERT_TRUE(c == std::chrono::duration<long, std::micro>(5));
-	ASSERT_TRUE(a == std::chrono::duration<long, std::micro>(10));
-	ASSERT_TRUE(b == std::chrono::duration<long, std::micro>(5));
+	EXPECT_EQ(d, c);
 }
 
 TEST(MultiplyDuration, ConstInt) {
 	clock::duration a = clock::duration(std::chrono::duration<long, std::micro>(10));
+	clock::duration b = clock::duration(std::chrono::duration<long, std::micro>(20));
 	
-	clock::duration b = a * 2;
+	clock::duration c = a * 2;
 	
-	ASSERT_TRUE(b == std::chrono::duration<long, std::micro>(50));
-	ASSERT_TRUE(a == std::chrono::duration<long, std::micro>(10));
+	EXPECT_EQ(c, b);
 }
 
 TEST(DivideDuration, ConstInt) {
 	clock::duration a = clock::duration(std::chrono::duration<long, std::micro>(10));
-	
-	clock::duration b = a / 2;
-	
-	ASSERT_TRUE(b == std::chrono::duration<long, std::micro>(5));
-	ASSERT_TRUE(a == std::chrono::duration<long, std::micro>(10));
-}
+	clock::duration b = clock::duration(std::chrono::duration<long, std::micro>(5));
 
-TEST(ModuloDuration, ConstInt) {
-	clock::duration a = clock::duration(std::chrono::duration<long, std::micro>(10));
-	
-	clock::duration b = a % 3;
-	
-	ASSERT_TRUE(b == std::chrono::duration<long, std::micro>(1));
-	ASSERT_TRUE(a == std::chrono::duration<long, std::micro>(10));
-	
-	clock::duration c = a % 2;
-	
-	ASSERT_TRUE(c == std::chrono::duration<long, std::micro>(0));
-}
+	clock::duration c = a / 2;
 
-TEST(ModuloDuration, ConstClock) {
-	clock::duration a = clock::duration(std::chrono::duration<long, std::micro>(10));
-	clock::duration b = clock::duration(std::chrono::duration<long, std::micro>(3));
-	
-	clock::duration c = a % b;
-	
-	ASSERT_TRUE(c == std::chrono::duration<long, std::micro>(1));
-	ASSERT_TRUE(a == std::chrono::duration<long, std::micro>(10));
-	ASSERT_TRUE(b == std::chrono::duration<long, std::micro>(3));
-	
-	clock::duration d = clock::duration(std::chrono::duration<long, std::micro>(2));
-	
-	clock::duration e = a % d;
-	
-	ASSERT_TRUE(e == std::chrono::duration<long, std::micro>(0));
-	ASSERT_TRUE(d == std::chrono::duration<long, std::micro>(2));
+	EXPECT_EQ(c, b);
 }
 
 /*
 	time_stamp
-*/
+
 
 TEST(IsEqualTimeStamp, ConstTimeStamp) {
-	clock::time_stamp a = clock::time_stamp::time_stamp(std::chrono::time_point<std::chrono::high_resolution_clock>(10));
-	clock::time_stamp b = clock::time_stamp::time_stamp(std::chrono::time_point<std::chrono::high_resolution_clock>(10));
-	clock::time_stamp c = clock::time_stamp::time_stamp(std::chrono::time_point<std::chrono::high_resolution_clock>(5));
+	clock::time_stamp a = clock::time_stamp::time_stamp(std::chrono::time_point<std::chrono::high_resolution_clock>(std::chrono::duration<long, std::micro>(10)));
+	clock::time_stamp b = clock::time_stamp::time_stamp(std::chrono::time_point<std::chrono::high_resolution_clock>(std::chrono::duration<long, std::micro>(10)));
+	clock::time_stamp c = clock::time_stamp::time_stamp(std::chrono::time_point<std::chrono::high_resolution_clock>(std::chrono::duration<long, std::micro>(5)));
 	
-	ASSERT_TRUE(a == b);
-	ASSERT_TRUE(a != c);
-	ASSERT_TRUE(b != c);
+	EXPECT_EQ(a , b);
+	EXPECT_NE(a , c);
+	EXPECT_NE(b , c);
 }
 
 TEST(IsNotEqualTimeStamp, ConstTimeStamp) {
-	clock::time_stamp a = clock::time_stamp::time_stamp(std::chrono::time_point<std::chrono::high_resolution_clock>(10));
-	clock::time_stamp b = clock::time_stamp::time_stamp(std::chrono::time_point<std::chrono::high_resolution_clock>(5));
-	clock::time_stamp c = clock::time_stamp::time_stamp(std::chrono::time_point<std::chrono::high_resolution_clock>(10));
+	clock::time_stamp a = clock::time_stamp::time_stamp(std::chrono::time_point<std::chrono::high_resolution_clock>(std::chrono::duration<long, std::micro>(10)));
+	clock::time_stamp b = clock::time_stamp::time_stamp(std::chrono::time_point<std::chrono::high_resolution_clock>(std::chrono::duration<long, std::micro>(5)));
+	clock::time_stamp c = clock::time_stamp::time_stamp(std::chrono::time_point<std::chrono::high_resolution_clock>(std::chrono::duration<long, std::micro>(10));
 	
-	ASSERT_TRUE(a != b);
-	ASSERT_TRUE(a == c);
-	ASSERT_TRUE(b != c);
+	EXPECT_NE(a , b);
+	EXPECT_EQ(a , c);
+	EXPECT_NE(b , c);
 }
 
 TEST(LessThanTimeStamp, ConstTimeStamp) {
@@ -234,7 +182,7 @@ TEST(GreaterOrEqualTimeStamp, ConstTimeStamp) {
 	
 }
 
-TEST(RemoveTimeStamp, ConstTimeStamp) {
+TEST(SubstractTimeStamp, ConstTimeStamp) {
 	
 }
 
@@ -243,31 +191,71 @@ TEST(RemoveTimeStamp, ConstTimeStamp) {
 */
 
 TEST(AddAssignFriend, TimeStampDuration) {
-	
+	clock::duration a = clock::duration(std::chrono::duration<long, std::micro>(10));
+	clock::time_stamp b = clock::time_stamp(std::chrono::time_point<std::chrono::high_resolution_clock>(std::chrono::duration<long, std::micro>(5)));
+	clock::time_stamp c = clock::time_stamp(std::chrono::time_point<std::chrono::high_resolution_clock>(std::chrono::duration<long, std::micro>(15)));
+
+	b += a;
+
+	EXPECT_EQ(b, c);
 }
 
-TEST(RemoveAssignFriend, TimeStampDuration) {
-	
+TEST(SubstractAssignFriend, TimeStampDuration) {
+	clock::duration a = clock::duration(std::chrono::duration<long, std::micro>(10));
+	clock::time_stamp b = clock::time_stamp(std::chrono::time_point<std::chrono::high_resolution_clock>(std::chrono::duration<long, std::micro>(5)));
+	clock::time_stamp c = clock::time_stamp(std::chrono::time_point<std::chrono::high_resolution_clock>(std::chrono::duration<long, std::micro>(15)));
+
+	c -= a;
+
+	EXPECT_EQ(c, b);
 }
 
 TEST(AddFriend, TimeStampDuration) {
-	
+	clock::duration a = clock::duration(std::chrono::duration<long, std::micro>(5));
+	clock::time_stamp b = clock::time_stamp(std::chrono::time_point<std::chrono::high_resolution_clock>(std::chrono::duration<long, std::micro>(5)));
+	clock::time_stamp c = clock::time_stamp(std::chrono::time_point<std::chrono::high_resolution_clock>(std::chrono::duration<long, std::micro>(10)));
+
+	clock::time_stamp d = b + a;
+
+	EXPECT_EQ(d, c);
 }
 
-TEST(RemoveFriend, TimeStampDuration) {
-	
+TEST(SubstractFriend, TimeStampDuration) {
+	clock::duration a = clock::duration(std::chrono::duration<long, std::micro>(5));
+	clock::time_stamp b = clock::time_stamp(std::chrono::time_point<std::chrono::high_resolution_clock>(std::chrono::duration<long, std::micro>(15)));
+	clock::time_stamp c = clock::time_stamp(std::chrono::time_point<std::chrono::high_resolution_clock>(std::chrono::duration<long, std::micro>(10)));
+
+	clock::time_stamp d = b - a;
+
+	EXPECT_EQ(d, c);
 }
 
 TEST(AddFriend, DurationTimeStamp) {
-	
+	clock::duration a = clock::duration(std::chrono::duration<long, std::micro>(5));
+	clock::time_stamp b = clock::time_stamp(std::chrono::time_point<std::chrono::high_resolution_clock>(std::chrono::duration<long, std::micro>(5)));
+	clock::time_stamp c = clock::time_stamp(std::chrono::time_point<std::chrono::high_resolution_clock>(std::chrono::duration<long, std::micro>(10)));
+
+	clock::time_stamp d = a + b;
+
+	EXPECT_EQ(d, c);
 }
 
 TEST(ShiftLeft, StreamDuration) {
-	
+	std::ostream stream;
+	clock::duration a = clock::duration(std::chrono::duration<long, std::micro>(5));
+
+	stream << a;
+
+	EXPECT_EQ(stream, a);
 }
 
 TEST(ShiftLeft, StreamTimeStamp) {
-	
+	std::ostream stream;
+	clock::time_stamp a = clock::time_stamp(std::chrono::time_point<std::chrono::high_resolution_clock>(std::chrono::duration<long, std::micro>(5)));
+
+	stream << a;
+
+	EXPECT_EQ(stream, a);
 }
 
 int main(int ac, char* av[]) {

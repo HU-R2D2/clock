@@ -45,8 +45,6 @@ class clock::duration {
 		const duration& operator-=(const duration& d);
 		const duration& operator*=(const int rhs);
 		const duration& operator/=(const int rhs);
-		const duration& operator%=(const int rhs);
-		const duration& operator%=(const duration& rhs);
 
 		bool operator==(const duration& rhs) const;
 		bool operator!=(const duration& rhs) const;
@@ -59,8 +57,6 @@ class clock::duration {
 		duration operator-(const clock::duration& rhs) const;
 		duration operator*(const int rhs) const;
 		duration operator/(const int rhs) const;
-		duration operator%(const int rhs) const;
-		duration operator%(const clock::duration& rhs) const;
 
 		friend clock::time_stamp& operator+=(clock::time_stamp& lhs, const clock::duration& d);
 		friend clock::time_stamp& operator-=(clock::time_stamp& lhs, const clock::duration& d);

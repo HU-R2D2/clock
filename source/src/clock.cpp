@@ -1,4 +1,4 @@
-#include "clock.hpp"
+#include "../include/clock.hpp"
 
 //============================================================================================================
 //Class Clock
@@ -132,7 +132,7 @@ bool clock::time_stamp::operator>=(const clock::time_stamp& rhs) const {
 
 
 clock::duration clock::time_stamp::operator-(const clock::time_stamp& rhs) const {
-	return std::chrono::duration_cast<std::chrono::microseconds>(this->m_time_stamp - rhs.m_time_stamp);
+	return duration(std::chrono::duration_cast<std::chrono::microseconds>(this->m_time_stamp - rhs.m_time_stamp));
 }
 
 //============================================================================================================

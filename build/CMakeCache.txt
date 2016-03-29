@@ -25,7 +25,7 @@ CMAKE_BUILD_TYPE:STRING=
 CMAKE_COLOR_MAKEFILE:BOOL=ON
 
 //CXX compiler
-CMAKE_CXX_COMPILER:STRING=C:/Program Files/mingw-w64/x86_64-5.3.0-posix-seh-rt_v4-rev0/mingw64/bin/g++.exe
+CMAKE_CXX_COMPILER:FILEPATH=C:/Program Files/mingw-w64/x86_64-5.3.0-posix-seh-rt_v4-rev0/mingw64/bin/g++.exe
 
 //Flags used by the compiler during all build types.
 CMAKE_CXX_FLAGS:STRING=
@@ -92,8 +92,8 @@ CMAKE_INSTALL_PREFIX:PATH=C:/Program Files (x86)/clock
 //Path to a program.
 CMAKE_LINKER:FILEPATH=C:/Program Files/mingw-w64/x86_64-5.3.0-posix-seh-rt_v4-rev0/mingw64/bin/ld.exe
 
-//No help, variable specified on the command line.
-CMAKE_MAKE_PROGRAM:UNINITIALIZED=make.exe
+//make program
+CMAKE_MAKE_PROGRAM:FILEPATH=C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe
 
 //Flags used by the linker during the creation of modules.
 CMAKE_MODULE_LINKER_FLAGS:STRING=

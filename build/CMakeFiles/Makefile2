@@ -53,20 +53,20 @@ RM = "C:\Program Files (x86)\CMake\bin\cmake.exe" -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = D:\School\R2D2\clock
+CMAKE_SOURCE_DIR = C:\Users\waila\Documents\GitHub\clock
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = D:\School\R2D2\clock\build
+CMAKE_BINARY_DIR = C:\Users\waila\Documents\GitHub\clock\build
 
 #=============================================================================
 # Target rules for target CMakeFiles/clock_test.dir
 
 # All Build rule for target.
-CMakeFiles/clock_test.dir/all: CMakeFiles/gtest.dir/all
 CMakeFiles/clock_test.dir/all: CMakeFiles/gtest_main.dir/all
+CMakeFiles/clock_test.dir/all: CMakeFiles/gtest.dir/all
 	$(MAKE) -f CMakeFiles\clock_test.dir\build.make CMakeFiles/clock_test.dir/depend
 	$(MAKE) -f CMakeFiles\clock_test.dir\build.make CMakeFiles/clock_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\School\R2D2\clock\build\CMakeFiles --progress-num=1,2,3 "Built target clock_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\waila\Documents\GitHub\clock\build\CMakeFiles --progress-num=1,2,3 "Built target clock_test"
 .PHONY : CMakeFiles/clock_test.dir/all
 
 # Include target in all.
@@ -76,9 +76,9 @@ all: CMakeFiles/clock_test.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/clock_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\School\R2D2\clock\build\CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\waila\Documents\GitHub\clock\build\CMakeFiles 7
 	$(MAKE) -f CMakeFiles\Makefile2 CMakeFiles/clock_test.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\School\R2D2\clock\build\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\waila\Documents\GitHub\clock\build\CMakeFiles 0
 .PHONY : CMakeFiles/clock_test.dir/rule
 
 # Convenience name for target.
@@ -103,7 +103,7 @@ clean: CMakeFiles/clock_test.dir/clean
 CMakeFiles/gtest.dir/all:
 	$(MAKE) -f CMakeFiles\gtest.dir\build.make CMakeFiles/gtest.dir/depend
 	$(MAKE) -f CMakeFiles\gtest.dir\build.make CMakeFiles/gtest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\School\R2D2\clock\build\CMakeFiles --progress-num=4,5 "Built target gtest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\waila\Documents\GitHub\clock\build\CMakeFiles --progress-num=4,5 "Built target gtest"
 .PHONY : CMakeFiles/gtest.dir/all
 
 # Include target in all.
@@ -113,9 +113,9 @@ all: CMakeFiles/gtest.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/gtest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\School\R2D2\clock\build\CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\waila\Documents\GitHub\clock\build\CMakeFiles 2
 	$(MAKE) -f CMakeFiles\Makefile2 CMakeFiles/gtest.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\School\R2D2\clock\build\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\waila\Documents\GitHub\clock\build\CMakeFiles 0
 .PHONY : CMakeFiles/gtest.dir/rule
 
 # Convenience name for target.
@@ -140,7 +140,7 @@ clean: CMakeFiles/gtest.dir/clean
 CMakeFiles/gtest_main.dir/all:
 	$(MAKE) -f CMakeFiles\gtest_main.dir\build.make CMakeFiles/gtest_main.dir/depend
 	$(MAKE) -f CMakeFiles\gtest_main.dir\build.make CMakeFiles/gtest_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\School\R2D2\clock\build\CMakeFiles --progress-num=6,7 "Built target gtest_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\waila\Documents\GitHub\clock\build\CMakeFiles --progress-num=6,7 "Built target gtest_main"
 .PHONY : CMakeFiles/gtest_main.dir/all
 
 # Include target in all.
@@ -150,9 +150,9 @@ all: CMakeFiles/gtest_main.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/gtest_main.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\School\R2D2\clock\build\CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\waila\Documents\GitHub\clock\build\CMakeFiles 2
 	$(MAKE) -f CMakeFiles\Makefile2 CMakeFiles/gtest_main.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\School\R2D2\clock\build\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\waila\Documents\GitHub\clock\build\CMakeFiles 0
 .PHONY : CMakeFiles/gtest_main.dir/rule
 
 # Convenience name for target.

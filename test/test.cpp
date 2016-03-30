@@ -6,7 +6,7 @@
 /*
 	duration
 */
-//c	onst duration& operator+=(const duration& d);
+//	const duration& operator+=(const duration& d);
 TEST(AddAssign, ConstTimeStamp) {
 	clock::duration a = clock::duration(std::chrono::duration<long, std::micro>(10));
 	clock::duration b = clock::duration(std::chrono::duration<long, std::micro>(10));
@@ -362,7 +362,7 @@ TEST(subtract_TimeStamp_Duration, constTimeStamp) {
 TEST(add_Duration_TimeStamp, constTimeStamp) {
 	clock::duration a = clock::duration(std::chrono::duration<long, std::micro>(10));
 	clock::time_stamp b = clock::time_stamp(std::chrono::time_point<std::chrono::high_resolution_clock>(std::chrono::duration<long, std::micro>(10)));
-	clock::time_stamp c = clock::time_stamp(std::chrono::time_point<std::chrono::high_resolution_clock>(std::chrono::duration<long, std::micro>(0)));
+	clock::time_stamp c = clock::time_stamp(std::chrono::time_point<std::chrono::high_resolution_clock>(std::chrono::duration<long, std::micro>(20)));
 
 	clock::time_stamp d = b + a;
 

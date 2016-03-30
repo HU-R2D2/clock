@@ -50,7 +50,7 @@ class clock::duration {
 		
 		//! The operator -=
 		/*!
-		  This operator extracts m_duration of current clock::duration with the m_duration of the given parameter d.
+		  This operator subtracts m_duration of current clock::duration with the m_duration of the given parameter d.
 		  \param d is a clock::duration
 		  \return const clock::duration with the calculated value in m_duration
 		*/
@@ -130,7 +130,7 @@ class clock::duration {
 		
 		//! The operator - (minus)
 		/*!
-		  This operator extracts m_duration of current clock::duration with the m_duration of the given parameter rhs. 
+		  This operator subtracts m_duration of current clock::duration with the m_duration of the given parameter rhs. 
 		  \param rhs is a clock::duration 
 		  \return clock::duration object of changed value
 		*/		
@@ -160,11 +160,12 @@ class clock::duration {
 		  \param d is a clock::duration
 		  \return lhs which is a clock:time_stamp
 		*/
+>>>>>>> 04f9b0b23769bfdf2b76e8c9eabf4851e1e9dda7
 		friend clock::time_stamp& operator+=(clock::time_stamp& lhs, const clock::duration& d);
 	
 		//! The operator -=
 		/*!
-		  This operater takes the lhs time_stamp and extracts the duration d to it and stores the calculated value back to the lhs.
+		  This operater takes the lhs time_stamp and subtracts the duration d to it and stores the calculated value back to the lhs.
 		  Use this to show the time after extracting duration.
 		  \param lhs is a clock::time_stamp
 		  \param d is a clock::duration
@@ -183,7 +184,7 @@ class clock::duration {
 		
 		//! The operator -(minus)
 		/*!
-		  This operater takes the lhs time_stamp and extracts the duration d to it. Use this to show the time after extracting duration.
+		  This operater takes the lhs time_stamp and subtracts the duration d to it. Use this to show the time after extracting duration.
 		  \param lhs is a clock::time_stamp
 		  \param rhs is a clock::duration
 		  \return clock::time_stamp object with the changed value
@@ -192,7 +193,7 @@ class clock::duration {
 		
 		//! The operator -(minus)
 		/*!
-		  This operater takes the lhs time_stamp and extracts the duration d to it. Use this to show the time after extracting duration.
+		  This operater takes the lhs time_stamp and subtracts the duration d to it. Use this to show the time after extracting duration.
 		  \param lhs is a clock::duration
 		  \param rhs is a clock::time_stamp
 		  \return clock::time_stamp object with the changed value
@@ -279,7 +280,7 @@ class clock::time_stamp {
 		
 		//! The operator -(minus)
 		/*!
-		  This operator extracts the m_time_stamp of the current timestamp with the given m_time_stamp and returns a duration
+		  This operator subtracts the m_time_stamp of the current timestamp with the given m_time_stamp and returns a duration
 		  \param rhs is a time_stamp 
 		  \return "true" if the comparison is true otherwise return "false"
 		*/		
@@ -296,7 +297,7 @@ class clock::time_stamp {
 		friend clock::time_stamp& operator+=(clock::time_stamp& lhs, const clock::duration& d);
 		//! The operator -=
 		/*!
-		  This operater takes the lhs time_stamp and extracts the duration d to it and stores the calculated value back to the lhs.
+		  This operater takes the lhs time_stamp and subtracts the duration d to it and stores the calculated value back to the lhs.
 		  Use this to show the time after extracting duration.
 		  \param lhs is a clock::time_stamp
 		  \param d is a clock::duration
@@ -315,7 +316,7 @@ class clock::time_stamp {
 		
 		//! The operator -(minus)
 		/*!
-		  This operater takes the lhs time_stamp and extracts the duration d to it. Use this to show the time after extracting duration.
+		  This operater takes the lhs time_stamp and subtracts the duration d to it. Use this to show the time after extracting duration.
 		  \param lhs is a clock::time_stamp
 		  \param rhs is a clock::duration
 		  \return clock::time_stamp object with the changed value
@@ -324,7 +325,7 @@ class clock::time_stamp {
 		
 		//! The operator -(minus)
 		/*!
-		  This operater takes the lhs time_stamp and extracts the duration d to it. Use this to show the time after extracting duration.
+		  This operater takes the lhs time_stamp and subtracts the duration d to it. Use this to show the time after extracting duration.
 		  \param lhs is a clock::duration
 		  \param rhs is a clock::time_stamp
 		  \return clock::time_stamp object with the changed value
@@ -353,7 +354,7 @@ clock::time_stamp& operator+=(clock::time_stamp& lhs, const clock::duration& d);
 
 //! The operator -=
 /*!
-  This operater takes the lhs time_stamp and extracts the duration d to it and stores the calculated value back to the lhs.
+  This operater takes the lhs time_stamp and subtracts the duration d to it and stores the calculated value back to the lhs.
   Use this to show the time after extracting duration.
   \param lhs is a clock::time_stamp
   \param d is a clock::duration
@@ -372,7 +373,7 @@ clock::time_stamp operator+(const clock::time_stamp& lhs, const clock::duration&
 
 //! The operator -
 /*!
-  This operater takes the lhs time_stamp and extracts the duration d to it. Use this to show the time after extracting duration.
+  This operater takes the lhs time_stamp and subtracts the duration d to it. Use this to show the time after extracting duration.
   \param lhs is a clock::duration
   \param rhs is a clock::time_stamp
   \return clock::time_stamp object with the changed value

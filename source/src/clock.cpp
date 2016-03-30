@@ -145,7 +145,7 @@ clock::time_stamp operator+(const clock::duration& lhs, const clock::time_stamp&
 
 
 std::ostream & operator<<(std::ostream & s, const clock::duration & rhs) {
-	s << rhs.m_duration.count();
+	s << rhs.m_duration.count() << " Microseconds";
 	return s;
 }
 

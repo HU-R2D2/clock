@@ -259,6 +259,8 @@ C:/Users/waila/Documents/GitHub/clock/source/include/clock.hpp
 C:/Users/waila/Documents/GitHub/clock/test/test.cpp
 iostream
 -
+string
+-
 windows.h
 C:/Users/waila/Documents/GitHub/clock/test/windows.h
 gtest/gtest.h

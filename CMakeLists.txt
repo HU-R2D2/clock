@@ -7,12 +7,12 @@ file(GLOB SOURCES_GTEST "source/src/*.cpp" "source/include/*.hpp" "test/*.cpp" "
 list(REMOVE_ITEM SOURCES_GTEST ${CMAKE_CURRENT_SOURCE_DIR}/source/src/clock.cpp)
 
 include_directories(
-  source/googletest/include
-  source/googletest)
+  ../deps/gtest/include
+  ../deps/gtest)
 
-link_directories(source/googletest/src)
-ADD_LIBRARY(gtest source/googletest/src/gtest-all.cc)
-ADD_LIBRARY(gtest_main source/googletest/src/gtest_main.cc)
+link_directories(../deps/gtest/src)
+ADD_LIBRARY(gtest ../deps/gtest/src/gtest-all.cc)
+ADD_LIBRARY(gtest_main ../deps/gtest/src/gtest_main.cc)
 
 SET( CMAKE_CXX_FLAGS  "${CMAKE_CXX_FLAGS} -std=c++11" )
 

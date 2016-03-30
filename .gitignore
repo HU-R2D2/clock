@@ -4,7 +4,6 @@ build
 # Created by https://www.gitignore.io/api/visualstudio,c++,xcode
 
 build/**
-!build/dummy.txt
 
 ### VisualStudio ###
 ## Ignore Visual Studio temporary files, build results, and

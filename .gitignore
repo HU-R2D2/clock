@@ -290,9 +290,8 @@ _Pvt_Extensions
 
 ## Build generated
 DerivedData/
-build/
-!dummy.txt
-!*/
+build/*
+!build/*.txt
 
 ## Various settings
 *.pbxuser

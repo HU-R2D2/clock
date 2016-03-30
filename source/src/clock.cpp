@@ -40,16 +40,6 @@ const clock::duration& clock::duration::operator/=(const int rhs) {
 	return *this;
 }
 
-const clock::duration& clock::duration::operator%=(const int rhs) {
-	this->m_duration = m_duration % rhs;
-	return *this;
-}
-
-const clock::duration& clock::duration::operator%=(const duration &rhs) {
-	this->m_duration = m_duration % rhs.m_duration;
-	return *this;
-}
-
 bool clock::duration::operator==(const duration & rhs) const {
 	return this->m_duration == rhs.m_duration;
 }
@@ -88,14 +78,6 @@ clock::duration clock::duration::operator*(const int rhs) const {
 
 clock::duration clock::duration::operator/(const int rhs) const {
 	return this->m_duration / rhs;
-}
-
-clock::duration clock::duration::operator%(const int rhs) const {
-	return this->m_duration % rhs;
-}
-
-clock::duration clock::duration::operator%(const clock::duration & rhs) const {
-	return this->m_duration % rhs.m_duration;
 }
 
 //============================================================================================================

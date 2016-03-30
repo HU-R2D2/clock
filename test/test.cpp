@@ -7,7 +7,7 @@
 	duration
 */
 
-TEST(AddAssign, ConstDuration) {
+TEST(AddAssign, ConstTimeStamp) {
 	clock::duration a = clock::duration(std::chrono::duration<long, std::micro>(10));
 	clock::duration b = clock::duration(std::chrono::duration<long, std::micro>(10));
 	clock::duration c = clock::duration(std::chrono::duration<long, std::micro>(20));
@@ -317,6 +317,28 @@ TEST(AddFriend, DurationTimeStamp) {
 
 	EXPECT_EQ(d, c);
 }
+
+
+TEST(addAssign_Timestamp_Duration, constTimeStamp) {
+	clock::time_stamp a = clock::time_stamp(std::chrono::time_point<std::chrono::high_resolution_clock>(std::chrono::duration<long, std::micro>(5)));
+	clock::duration b = clock::duration(std::chrono::duration<long, std::micro>(5));
+	clock::time_stamp c = clock::time_stamp(std::chrono::time_point<std::chrono::high_resolution_clock>(std::chrono::duration<long, std::micro>(10)));
+
+	a+=b;
+
+	EXPECT_EQ(a, c);
+}
+//clock::time_stamp& operator+=(clock::time_stamp& lhs, const clock::duration& d);
+TEST(add_TimeStamp_Duration, constTimeStamp) {
+	clock::time_stamp a = clock::time_stamp(std::chrono::time_point<std::chrono::high_resolution_clock>(std::chrono::duration<long, std::micro>(5)));
+	clock::duration b = clock::duration(std::chrono::duration<long, std::micro>(5));
+	clock::time_stamp c = clock::time_stamp(std::chrono::time_point<std::chrono::high_resolution_clock>(std::chrono::duration<long, std::micro>(10)));
+
+	clock::time_stamp d = b + a;
+
+	EXPECT_EQ(d, c);
+}
+
 /*
 TEST(ShiftLeft, StreamDuration) {
 	std::ostream stream;

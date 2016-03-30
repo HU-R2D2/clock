@@ -283,7 +283,7 @@ _Pvt_Extensions
 *.out
 *.app
 
-build/*
+build/**
 !build/dummy.txt
 
 ### Xcode ###

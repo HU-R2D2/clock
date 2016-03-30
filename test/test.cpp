@@ -1,4 +1,5 @@
 #include <iostream>
+#include "windows.h"
 #include "gtest\gtest.h"
 #include "..\source\include\clock.hpp"
 
@@ -169,20 +170,18 @@ TEST(IsEqualTimeStamp, ConstTimeStamp) {
 	b = clock::time_stamp(t1);
 	
 	EXPECT_TRUE(a == b) << "Equal vanaf time_point constructor";
-	
+
+	Sleep(1);
 	b = clock::time_stamp();
 	EXPECT_FALSE(a == b) << "Returns false voor verschillende timestamps";
 }
 
 TEST(IsNotEqualTimeStamp, ConstTimeStamp) {
 	clock::time_stamp a = clock::time_stamp();
-	int x = 1;
-	for(int i= 0; i< 1000; ++i){
-		x++;
-	}
+	Sleep(1);
 	clock::time_stamp b = clock::time_stamp();
 	
-	EXPECT_TRUE(a != b) << "2 default constructors ongelijk met for loop ertussen";
+	EXPECT_TRUE(a != b) << "2 default constructors ongelijk met Sleep(1ms) ertussen";
 	
 	std::chrono::high_resolution_clock::time_point t1 = std::chrono::high_resolution_clock::now(); // Vergelijking vanaf voorgedefineerde tijd
 	a = clock::time_stamp(t1);
@@ -192,10 +191,7 @@ TEST(IsNotEqualTimeStamp, ConstTimeStamp) {
 
 TEST(LessThanTimeStamp, ConstTimeStamp) {
 	clock::time_stamp a = clock::time_stamp();
-	int x = 1;
-	for(int i= 0; i< 1000; ++i){
-		x++;
-	}
+	Sleep(1);
 	clock::time_stamp b = clock::time_stamp();
 	EXPECT_TRUE(a < b) << "Returns true als a < b";
 	EXPECT_FALSE(b < a) << "Returns false bij b < a";
@@ -209,10 +205,7 @@ TEST(LessThanTimeStamp, ConstTimeStamp) {
 
 TEST(LessOrEqualTimeStamp, ConstTimeStamp) {
 	clock::time_stamp a = clock::time_stamp();
-	int x = 1;
-	for(int i= 0; i< 1000; ++i){
-		x++;
-	}
+	Sleep(1);
 	clock::time_stamp b = clock::time_stamp();
 	EXPECT_TRUE(a <= b) << "Returns true als a <= b";
 	EXPECT_FALSE(b <= a) << "Returns false als b <= a";
@@ -226,10 +219,7 @@ TEST(LessOrEqualTimeStamp, ConstTimeStamp) {
 
 TEST(GreaterThanTimeStamp, ConstTimeStamp) {
 	clock::time_stamp b = clock::time_stamp();
-	int x = 1;
-	for(int i= 0; i< 1000; ++i){
-		x++;
-	}
+	Sleep(1);
 	clock::time_stamp a = clock::time_stamp();
 	EXPECT_TRUE(a > b) << "Returns true als a > b";
 	EXPECT_FALSE(b > a) << "Returns false als b > a";
@@ -243,10 +233,7 @@ TEST(GreaterThanTimeStamp, ConstTimeStamp) {
 
 TEST(GreaterOrEqualTimeStamp, ConstTimeStamp) {
 	clock::time_stamp b = clock::time_stamp();
-	int x = 1;
-	for(int i= 0; i< 1000; ++i){
-		x++;
-	}
+	Sleep(1);
 	clock::time_stamp a = clock::time_stamp();
 	EXPECT_TRUE(a >= b) << "Returns true als a >= b";
 	EXPECT_FALSE(b >= a) << "Returns false als b >= a";
@@ -260,10 +247,7 @@ TEST(GreaterOrEqualTimeStamp, ConstTimeStamp) {
 
 TEST(DifferenceTimeStamp, ConstTimeStamp) {
 	std::chrono::high_resolution_clock::time_point t1 = std::chrono::high_resolution_clock::now();
-	int x = 1;
-	for(int i= 0; i< 1000; ++i){
-		x++;
-	}
+	Sleep(1);
 	std::chrono::high_resolution_clock::time_point t2 = std::chrono::high_resolution_clock::now();
 	
 	clock::time_stamp a = clock::time_stamp(t1);

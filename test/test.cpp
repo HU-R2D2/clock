@@ -317,25 +317,28 @@ TEST(AddFriend, DurationTimeStamp) {
 
 	EXPECT_EQ(d, c);
 }
-/*
+
 TEST(ShiftLeft, StreamDuration) {
 	std::ostream stream;
 	clock::duration a = clock::duration(std::chrono::duration<long, std::micro>(5));
 
 	stream << a;
 
-	EXPECT_EQ(stream, a);
+	EXPECT_EQ(stream, std::chrono::duration<long,std::micro>(5).count());
 }
 
 TEST(ShiftLeft, StreamTimeStamp) {
 	std::ostream stream;
-	clock::time_stamp a = clock::time_stamp(std::chrono::time_point<std::chrono::high_resolution_clock>(std::chrono::duration<long, std::micro>(5)));
+	std::chrono::time_point<std::chrono::high_resolution_clock> t1 = std::chrono::time_point<std::chrono::high_resolution_clock>(std::chrono::duration<long, std::micro>(5));
+	clock::time_stamp a = clock::time_stamp(t1);
+	
+	std::chrono::microseconds ms = std::chrono::duration_cast<std::chrono::microseconds>(t1.time_since_epoch())
 
 	stream << a;
-
-	EXPECT_EQ(stream, a);
+	
+	EXPECT_EQ(stream, ms.count());
 }
-*/
+
 int main(int ac, char* av[]) {
 	::testing::InitGoogleTest(&ac, av);
  	return RUN_ALL_TESTS();

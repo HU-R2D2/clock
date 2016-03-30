@@ -290,7 +290,7 @@ _Pvt_Extensions
 
 ## Build generated
 DerivedData/
-build/
+build/**
 !build/dummy.txt
 
 ## Various settings

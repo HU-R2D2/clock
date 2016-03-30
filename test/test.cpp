@@ -399,25 +399,19 @@ TEST(add_Duration_TimeStamp, constTimeStamp) {
 
 	EXPECT_EQ(d, c);
 }
-/*
+
 TEST(ShiftLeft, StreamDuration) {
-	std::ostream stream;
 	clock::duration a = clock::duration(std::chrono::duration<long, std::micro>(5));
 
-	stream << a;
-
-	EXPECT_EQ(stream, a);
+	std::cout << a;
 }
 
 TEST(ShiftLeft, StreamTimeStamp) {
-	std::ostream stream;
 	clock::time_stamp a = clock::time_stamp(std::chrono::time_point<std::chrono::high_resolution_clock>(std::chrono::duration<long, std::micro>(5)));
 
-	stream << a;
-
-	EXPECT_EQ(stream, a);
+	std::cout << a;
 }
-*/
+
 int main(int ac, char* av[]) {
 	::testing::InitGoogleTest(&ac, av);
  	return RUN_ALL_TESTS();

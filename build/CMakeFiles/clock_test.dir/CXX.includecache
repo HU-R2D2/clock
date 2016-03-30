@@ -246,23 +246,23 @@ cxxabi.h
 acxx_demangle.h
 -
 
-C:/Users/waila/Documents/GitHub/clock/source/include/clock.hpp
+D:/School/R2D2/clock/source/include/clock.hpp
 chrono
 -
 iostream
 -
 
-C:/Users/waila/Documents/GitHub/clock/source/src/clock.cpp
+D:/School/R2D2/clock/source/src/clock.cpp
 ../include/clock.hpp
-C:/Users/waila/Documents/GitHub/clock/source/include/clock.hpp
+D:/School/R2D2/clock/source/include/clock.hpp
 
-C:/Users/waila/Documents/GitHub/clock/test/test.cpp
+D:/School/R2D2/clock/test/test.cpp
 iostream
 -
 windows.h
-C:/Users/waila/Documents/GitHub/clock/test/windows.h
+D:/School/R2D2/clock/test/windows.h
 gtest/gtest.h
-C:/Users/waila/Documents/GitHub/clock/test/gtest/gtest.h
+D:/School/R2D2/clock/test/gtest/gtest.h
 ../source/include/clock.hpp
-C:/Users/waila/Documents/GitHub/clock/source/include/clock.hpp
+D:/School/R2D2/clock/source/include/clock.hpp
 

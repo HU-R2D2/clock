@@ -42,10 +42,10 @@ RM = "C:\Program Files (x86)\CMake\bin\cmake.exe" -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\waila\Documents\GitHub\clock
+CMAKE_SOURCE_DIR = D:\School\R2D2\clock
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\waila\Documents\GitHub\clock\build
+CMAKE_BINARY_DIR = D:\School\R2D2\clock\build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/gtest_main.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/gtest_main.dir/flags.make
 CMakeFiles/gtest_main.dir/source/googletest/src/gtest_main.cc.obj: CMakeFiles/gtest_main.dir/flags.make
 CMakeFiles/gtest_main.dir/source/googletest/src/gtest_main.cc.obj: CMakeFiles/gtest_main.dir/includes_CXX.rsp
 CMakeFiles/gtest_main.dir/source/googletest/src/gtest_main.cc.obj: ../source/googletest/src/gtest_main.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\waila\Documents\GitHub\clock\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/gtest_main.dir/source/googletest/src/gtest_main.cc.obj"
-	C:\TDM-GCC-64\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\gtest_main.dir\source\googletest\src\gtest_main.cc.obj -c C:\Users\waila\Documents\GitHub\clock\source\googletest\src\gtest_main.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\School\R2D2\clock\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/gtest_main.dir/source/googletest/src/gtest_main.cc.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\gtest_main.dir\source\googletest\src\gtest_main.cc.obj -c D:\School\R2D2\clock\source\googletest\src\gtest_main.cc
 
 CMakeFiles/gtest_main.dir/source/googletest/src/gtest_main.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gtest_main.dir/source/googletest/src/gtest_main.cc.i"
-	C:\TDM-GCC-64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\waila\Documents\GitHub\clock\source\googletest\src\gtest_main.cc > CMakeFiles\gtest_main.dir\source\googletest\src\gtest_main.cc.i
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\School\R2D2\clock\source\googletest\src\gtest_main.cc > CMakeFiles\gtest_main.dir\source\googletest\src\gtest_main.cc.i
 
 CMakeFiles/gtest_main.dir/source/googletest/src/gtest_main.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gtest_main.dir/source/googletest/src/gtest_main.cc.s"
-	C:\TDM-GCC-64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\waila\Documents\GitHub\clock\source\googletest\src\gtest_main.cc -o CMakeFiles\gtest_main.dir\source\googletest\src\gtest_main.cc.s
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\School\R2D2\clock\source\googletest\src\gtest_main.cc -o CMakeFiles\gtest_main.dir\source\googletest\src\gtest_main.cc.s
 
 CMakeFiles/gtest_main.dir/source/googletest/src/gtest_main.cc.obj.requires:
 
@@ -91,7 +91,7 @@ gtest_main_EXTERNAL_OBJECTS =
 libgtest_main.a: CMakeFiles/gtest_main.dir/source/googletest/src/gtest_main.cc.obj
 libgtest_main.a: CMakeFiles/gtest_main.dir/build.make
 libgtest_main.a: CMakeFiles/gtest_main.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\waila\Documents\GitHub\clock\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libgtest_main.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\School\R2D2\clock\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libgtest_main.a"
 	$(CMAKE_COMMAND) -P CMakeFiles\gtest_main.dir\cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\gtest_main.dir\link.txt --verbose=$(VERBOSE)
 
@@ -109,6 +109,6 @@ CMakeFiles/gtest_main.dir/clean:
 .PHONY : CMakeFiles/gtest_main.dir/clean
 
 CMakeFiles/gtest_main.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\waila\Documents\GitHub\clock C:\Users\waila\Documents\GitHub\clock C:\Users\waila\Documents\GitHub\clock\build C:\Users\waila\Documents\GitHub\clock\build C:\Users\waila\Documents\GitHub\clock\build\CMakeFiles\gtest_main.dir\DependInfo.cmake --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" D:\School\R2D2\clock D:\School\R2D2\clock D:\School\R2D2\clock\build D:\School\R2D2\clock\build D:\School\R2D2\clock\build\CMakeFiles\gtest_main.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/gtest_main.dir/depend
 

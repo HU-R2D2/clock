@@ -38,7 +38,7 @@ class clock::duration {
 		//! Default copy constructor
 		duration(const duration& arg) = default;
 
-	public: /*Opearators*/
+	public: /*Operators*/
 		
 		//! The operator += 
 		/*!
@@ -160,7 +160,6 @@ class clock::duration {
 		  \param d is a clock::duration
 		  \return lhs which is a clock:time_stamp
 		*/
->>>>>>> 04f9b0b23769bfdf2b76e8c9eabf4851e1e9dda7
 		friend clock::time_stamp& operator+=(clock::time_stamp& lhs, const clock::duration& d);
 	
 		//! The operator -=

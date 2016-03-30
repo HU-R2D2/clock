@@ -158,7 +158,6 @@ class clock::duration {
 		*/		
 		duration operator/(const int rhs) const;
 
-
 		friend clock::time_stamp& operator+=(clock::time_stamp& lhs, const clock::duration& d);
 		friend clock::time_stamp& operator-=(clock::time_stamp& lhs, const clock::duration& d);
 		friend clock::time_stamp operator+(const clock::time_stamp& lhs, const clock::duration& rhs);

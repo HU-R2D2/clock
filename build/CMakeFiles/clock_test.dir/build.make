@@ -42,10 +42,10 @@ RM = "C:\Program Files (x86)\CMake\bin\cmake.exe" -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = D:\School\R2D2\clock
+CMAKE_SOURCE_DIR = C:\Users\waila\Documents\GitHub\clock
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = D:\School\R2D2\clock\build
+CMAKE_BINARY_DIR = C:\Users\waila\Documents\GitHub\clock\build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/clock_test.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/clock_test.dir/flags.make
 CMakeFiles/clock_test.dir/test/test.cpp.obj: CMakeFiles/clock_test.dir/flags.make
 CMakeFiles/clock_test.dir/test/test.cpp.obj: CMakeFiles/clock_test.dir/includes_CXX.rsp
 CMakeFiles/clock_test.dir/test/test.cpp.obj: ../test/test.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\School\R2D2\clock\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/clock_test.dir/test/test.cpp.obj"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\clock_test.dir\test\test.cpp.obj -c D:\School\R2D2\clock\test\test.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\waila\Documents\GitHub\clock\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/clock_test.dir/test/test.cpp.obj"
+	C:\TDM-GCC-64\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\clock_test.dir\test\test.cpp.obj -c C:\Users\waila\Documents\GitHub\clock\test\test.cpp
 
 CMakeFiles/clock_test.dir/test/test.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/clock_test.dir/test/test.cpp.i"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\School\R2D2\clock\test\test.cpp > CMakeFiles\clock_test.dir\test\test.cpp.i
+	C:\TDM-GCC-64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\waila\Documents\GitHub\clock\test\test.cpp > CMakeFiles\clock_test.dir\test\test.cpp.i
 
 CMakeFiles/clock_test.dir/test/test.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/clock_test.dir/test/test.cpp.s"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\School\R2D2\clock\test\test.cpp -o CMakeFiles\clock_test.dir\test\test.cpp.s
+	C:\TDM-GCC-64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\waila\Documents\GitHub\clock\test\test.cpp -o CMakeFiles\clock_test.dir\test\test.cpp.s
 
 CMakeFiles/clock_test.dir/test/test.cpp.obj.requires:
 
@@ -84,16 +84,16 @@ CMakeFiles/clock_test.dir/test/test.cpp.obj.provides.build: CMakeFiles/clock_tes
 CMakeFiles/clock_test.dir/source/src/clock.cpp.obj: CMakeFiles/clock_test.dir/flags.make
 CMakeFiles/clock_test.dir/source/src/clock.cpp.obj: CMakeFiles/clock_test.dir/includes_CXX.rsp
 CMakeFiles/clock_test.dir/source/src/clock.cpp.obj: ../source/src/clock.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\School\R2D2\clock\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/clock_test.dir/source/src/clock.cpp.obj"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\clock_test.dir\source\src\clock.cpp.obj -c D:\School\R2D2\clock\source\src\clock.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\waila\Documents\GitHub\clock\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/clock_test.dir/source/src/clock.cpp.obj"
+	C:\TDM-GCC-64\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\clock_test.dir\source\src\clock.cpp.obj -c C:\Users\waila\Documents\GitHub\clock\source\src\clock.cpp
 
 CMakeFiles/clock_test.dir/source/src/clock.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/clock_test.dir/source/src/clock.cpp.i"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\School\R2D2\clock\source\src\clock.cpp > CMakeFiles\clock_test.dir\source\src\clock.cpp.i
+	C:\TDM-GCC-64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\waila\Documents\GitHub\clock\source\src\clock.cpp > CMakeFiles\clock_test.dir\source\src\clock.cpp.i
 
 CMakeFiles/clock_test.dir/source/src/clock.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/clock_test.dir/source/src/clock.cpp.s"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\School\R2D2\clock\source\src\clock.cpp -o CMakeFiles\clock_test.dir\source\src\clock.cpp.s
+	C:\TDM-GCC-64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\waila\Documents\GitHub\clock\source\src\clock.cpp -o CMakeFiles\clock_test.dir\source\src\clock.cpp.s
 
 CMakeFiles/clock_test.dir/source/src/clock.cpp.obj.requires:
 
@@ -122,7 +122,7 @@ clock_test.exe: libgtest_main.a
 clock_test.exe: CMakeFiles/clock_test.dir/linklibs.rsp
 clock_test.exe: CMakeFiles/clock_test.dir/objects1.rsp
 clock_test.exe: CMakeFiles/clock_test.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\School\R2D2\clock\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable clock_test.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\waila\Documents\GitHub\clock\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable clock_test.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\clock_test.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -140,6 +140,6 @@ CMakeFiles/clock_test.dir/clean:
 .PHONY : CMakeFiles/clock_test.dir/clean
 
 CMakeFiles/clock_test.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" D:\School\R2D2\clock D:\School\R2D2\clock D:\School\R2D2\clock\build D:\School\R2D2\clock\build D:\School\R2D2\clock\build\CMakeFiles\clock_test.dir\DependInfo.cmake --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\waila\Documents\GitHub\clock C:\Users\waila\Documents\GitHub\clock C:\Users\waila\Documents\GitHub\clock\build C:\Users\waila\Documents\GitHub\clock\build C:\Users\waila\Documents\GitHub\clock\build\CMakeFiles\clock_test.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/clock_test.dir/depend
 

@@ -283,9 +283,6 @@ _Pvt_Extensions
 *.out
 *.app
 
-build/**
-!dummy.txt
-
 ### Xcode ###
 # Xcode
 #
@@ -293,6 +290,9 @@ build/**
 
 ## Build generated
 DerivedData/
+build/
+!dummy.txt
+!*/
 
 ## Various settings
 *.pbxuser

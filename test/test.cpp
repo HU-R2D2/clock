@@ -7,6 +7,25 @@
 	duration
 */
 
+TEST(ConstructorDuration, Default) {
+	clock::duration a = clock::duration();
+	
+	EXPECT_EQ(a, (std::chrono::duration<long, std::micro>(0)));
+}
+
+TEST(ConstructorDuration, Argument) {
+	clock::duration a = clock::duration(std::chrono::duration<long, std::micro>(10));
+	
+	EXPECT_EQ(a, (std::chrono::duration<long, std::micro>(10)));
+}
+
+TEST(ConstructorDuration, Copy) {
+	clock::duration a = clock::duration();
+	clock::duration b = a;
+	
+	EXPECT_EQ(a, b);
+}
+
 TEST(AddAssign, ConstTimeStamp) {
 	clock::duration a = clock::duration(std::chrono::duration<long, std::micro>(10));
 	clock::duration b = clock::duration(std::chrono::duration<long, std::micro>(10));
@@ -147,8 +166,19 @@ TEST(DivideDuration, ConstInt) {
 	time_stamp
 */
 
-TEST(ConstructorTimeStamp, Default){ // TODO Moet nog gedaan worden, weet momenteel niet zogoed hoe ik zijn returnwaarde moet testen/printen
+TEST(ConstructorTimeStamp, Default) {
 	clock::time_stamp a = clock::time_stamp();
+	clock::time_stamp b = a;
+	clock::time_stamp c = a;
+	
+	EXPECT_EQ(b, c);
+}
+
+TEST(ConstructorTimeStamp, Argument) {
+	std::chrono::high_resolution_clock::time_point t1 = std::chrono::high_resolution_clock::now();
+	clock::time_stamp a = clock::time_stamp(t1);
+	
+	EXPECT_EQ(a, clock::time_stamp(t1));
 }
 
 TEST(ConstructorTimeStamp, Copy){

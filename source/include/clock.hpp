@@ -320,7 +320,7 @@ class clock::time_stamp {
 		*/		
 		friend clock::time_stamp operator-(const clock::time_stamp& lhs, const clock::duration& rhs);
 		
-		//! The operator -(minus)
+		//! The operator +(plus)
 		/*!
 		  This operater takes the lhs time_stamp and subtracts the duration d to it. Use this to show the time after extracting duration.
 		  \param lhs is a clock::duration

@@ -1,121 +1,121 @@
-#include "../include/clock.hpp"
+#include "../include/Clock.hpp"
 
 //============================================================================================================
 //Class Clock
 //============================================================================================================
-clock::time_stamp clock::get_current_time()
+Clock::TimeStamp Clock::get_current_time()
 {
-	return time_stamp();
+	return TimeStamp();
 }
 
 //============================================================================================================
-//Class Clock::duration
+//Class Clock::Duration
 //============================================================================================================
 
-clock::duration::duration() :
+Clock::Duration::Duration() :
 	m_duration(std::chrono::microseconds(0))
 {}
 
-clock::duration::duration(const std::chrono::duration<long, std::micro>& arg) :
+Clock::Duration::Duration(const std::chrono::duration<long, std::micro>& arg) :
 	m_duration(arg)
 {}
 
-const clock::duration& clock::duration::operator+=(const duration &d) {
+const Clock::Duration& Clock::Duration::operator+=(const Duration &d) {
 	this->m_duration += d.m_duration;
 	return *this;
 }
 
-const clock::duration& clock::duration::operator-=(const duration &d) {
+const Clock::Duration& Clock::Duration::operator-=(const Duration &d) {
 	this->m_duration -= d.m_duration;
 	return *this;
 }
 
-const clock::duration& clock::duration::operator*=(const int rhs) {
+const Clock::Duration& Clock::Duration::operator*=(const int rhs) {
 	this->m_duration = m_duration * rhs;
 	return *this;
 }
 
-const clock::duration& clock::duration::operator/=(const int rhs) {
+const Clock::Duration& Clock::Duration::operator/=(const int rhs) {
 	this->m_duration = m_duration / rhs;
 	return *this;
 }
 
-bool clock::duration::operator==(const duration & rhs) const {
+bool Clock::Duration::operator==(const Duration & rhs) const {
 	return this->m_duration == rhs.m_duration;
 }
 
-bool clock::duration::operator!=(const duration & rhs) const {
+bool Clock::Duration::operator!=(const Duration & rhs) const {
 	return !(this->m_duration == rhs.m_duration);
 }
 
-bool clock::duration::operator<(const duration & rhs) const {
+bool Clock::Duration::operator<(const Duration & rhs) const {
 	return this->m_duration < rhs.m_duration;
 }
 
-bool clock::duration::operator<=(const duration & rhs) const {
+bool Clock::Duration::operator<=(const Duration & rhs) const {
 	return this->m_duration <= rhs.m_duration;
 }
 
-bool clock::duration::operator>(const duration & rhs) const {
+bool Clock::Duration::operator>(const Duration & rhs) const {
 	return this->m_duration > rhs.m_duration;
 }
 
-bool clock::duration::operator>=(const duration & rhs) const {
+bool Clock::Duration::operator>=(const Duration & rhs) const {
 	return this->m_duration >= rhs.m_duration;
 }
 
-clock::duration clock::duration::operator+(const clock::duration & rhs) const {
+Clock::Duration Clock::Duration::operator+(const Clock::Duration & rhs) const {
 	return this->m_duration + rhs.m_duration;
 }
 
-clock::duration clock::duration::operator-(const clock::duration & rhs) const {
+Clock::Duration Clock::Duration::operator-(const Clock::Duration & rhs) const {
 	return this->m_duration - rhs.m_duration;
 }
 
-clock::duration clock::duration::operator*(const int rhs) const {
+Clock::Duration Clock::Duration::operator*(const int rhs) const {
 	return this->m_duration * rhs;
 }
 
-clock::duration clock::duration::operator/(const int rhs) const {
+Clock::Duration Clock::Duration::operator/(const int rhs) const {
 	return this->m_duration / rhs;
 }
 
 //============================================================================================================
-//Class Clock::time_stamp
+//Class Clock::TimeStamp
 //============================================================================================================
 
-clock::time_stamp::time_stamp() :
+Clock::TimeStamp::TimeStamp() :
 	m_time_stamp(std::chrono::high_resolution_clock::now())
 {}
 
-clock::time_stamp::time_stamp
+Clock::TimeStamp::TimeStamp
 (const std::chrono::time_point<std::chrono::high_resolution_clock>& arg) :
 	m_time_stamp(arg)
 {}
 
-bool clock::time_stamp::operator==(const clock::time_stamp& rhs) const {
+bool Clock::TimeStamp::operator==(const Clock::TimeStamp& rhs) const {
 	return this->m_time_stamp == rhs.m_time_stamp;
 }
-bool clock::time_stamp::operator!=(const clock::time_stamp& rhs) const {
+bool Clock::TimeStamp::operator!=(const Clock::TimeStamp& rhs) const {
 	return !(this->m_time_stamp == rhs.m_time_stamp);
 }
-bool clock::time_stamp::operator<(const clock::time_stamp& rhs) const {
+bool Clock::TimeStamp::operator<(const Clock::TimeStamp& rhs) const {
 	return this->m_time_stamp < rhs.m_time_stamp;
 }
-bool clock::time_stamp::operator<=(const clock::time_stamp& rhs) const {
+bool Clock::TimeStamp::operator<=(const Clock::TimeStamp& rhs) const {
 	return this->m_time_stamp <= rhs.m_time_stamp;
 }
-bool clock::time_stamp::operator>(const clock::time_stamp& rhs) const {
+bool Clock::TimeStamp::operator>(const Clock::TimeStamp& rhs) const {
 	return this->m_time_stamp > rhs.m_time_stamp;
 }
-bool clock::time_stamp::operator>=(const clock::time_stamp& rhs) const {
+bool Clock::TimeStamp::operator>=(const Clock::TimeStamp& rhs) const {
 	return this->m_time_stamp >= rhs.m_time_stamp;
 }
 
 
-clock::duration clock::time_stamp::operator-
-(const clock::time_stamp& rhs) const {
-	return duration(std::chrono::duration_cast<std::chrono::microseconds>
+Clock::Duration Clock::TimeStamp::operator-
+(const Clock::TimeStamp& rhs) const {
+	return Duration(std::chrono::duration_cast<std::chrono::microseconds>
 		(this->m_time_stamp - rhs.m_time_stamp));
 }
 
@@ -123,40 +123,40 @@ clock::duration clock::time_stamp::operator-
 //Friend functies
 //============================================================================================================
 
-clock::time_stamp& operator+=
-(clock::time_stamp& lhs, const clock::duration& d) {
+Clock::TimeStamp& operator+=
+(Clock::TimeStamp& lhs, const Clock::Duration& d) {
 	lhs.m_time_stamp = lhs.m_time_stamp + d.m_duration;
 	return lhs;
 }
 
-clock::time_stamp& operator-=
-(clock::time_stamp& lhs, const clock::duration& d) {
+Clock::TimeStamp& operator-=
+(Clock::TimeStamp& lhs, const Clock::Duration& d) {
 	lhs.m_time_stamp = lhs.m_time_stamp - d.m_duration;
 	return lhs;
 }
 
-clock::time_stamp operator+
-(const clock::time_stamp& lhs, const clock::duration& rhs) {
+Clock::TimeStamp operator+
+(const Clock::TimeStamp& lhs, const Clock::Duration& rhs) {
 	return lhs.m_time_stamp + rhs.m_duration;
 }
 
-clock::time_stamp operator-
-(const clock::time_stamp& lhs, const clock::duration& rhs) {
+Clock::TimeStamp operator-
+(const Clock::TimeStamp& lhs, const Clock::Duration& rhs) {
 	return lhs.m_time_stamp - rhs.m_duration;
 }
 
-clock::time_stamp operator+
-(const clock::duration& lhs, const clock::time_stamp& rhs) {
+Clock::TimeStamp operator+
+(const Clock::Duration& lhs, const Clock::TimeStamp& rhs) {
 	return rhs.m_time_stamp + lhs.m_duration;
 }
 
 
-std::ostream & operator<<(std::ostream & s, const clock::duration & rhs) {
+std::ostream & operator<<(std::ostream & s, const Clock::Duration & rhs) {
 	s << rhs.m_duration.count();
 	return s;
 }
 
-std::ostream & operator<<(std::ostream & s, const clock::time_stamp &rhs) {
+std::ostream & operator<<(std::ostream & s, const Clock::TimeStamp &rhs) {
 	std::chrono::microseconds ms = 
 		std::chrono::duration_cast<std::chrono::microseconds>(rhs.m_time_stamp.time_since_epoch());
 	s << ms.count();

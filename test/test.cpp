@@ -1,7 +1,7 @@
 #include <iostream>
 #include <thread>
 #include "gtest/gtest.h"
-#include "../source/include/clock.hpp"
+#include "../source/include/Clock.hpp"
 
 /*
 	duration
@@ -9,35 +9,35 @@
 
 //	duration();
 TEST(ConstructorDuration, Default) {
-	clock::duration a = clock::duration();
+	Clock::Duration a = Clock::Duration();
 	
 	EXPECT_EQ(a, (std::chrono::duration<long, std::micro>(0)));
 }
 
 //	duration(const std::chrono::duration<long, std::micro>& arg);
 TEST(ConstructorDuration, Argument) {
-	clock::duration a = 
-		clock::duration(std::chrono::duration<long, std::micro>(10));
+	Clock::Duration a = 
+		Clock::Duration(std::chrono::duration<long, std::micro>(10));
 	
 	EXPECT_EQ(a, (std::chrono::duration<long, std::micro>(10)));
 }
 
 //	duration(const duration& arg) = default;
 TEST(ConstructorDuration, Copy) {
-	clock::duration a = clock::duration();
-	clock::duration b = a;
+	Clock::Duration a = Clock::Duration();
+	Clock::Duration b = a;
 	
 	EXPECT_EQ(a, b);
 }
 
 //	const duration& operator+=(const duration& d);
 TEST(AddAssign, ConstTimeStamp) {
-	clock::duration a = 
-		clock::duration(std::chrono::duration<long, std::micro>(10));
-	clock::duration b = 
-		clock::duration(std::chrono::duration<long, std::micro>(10));
-	clock::duration c = 
-		clock::duration(std::chrono::duration<long, std::micro>(20));
+	Clock::Duration a = 
+		Clock::Duration(std::chrono::duration<long, std::micro>(10));
+	Clock::Duration b = 
+		Clock::Duration(std::chrono::duration<long, std::micro>(10));
+	Clock::Duration c = 
+		Clock::Duration(std::chrono::duration<long, std::micro>(20));
 
 	a += b;
 	
@@ -46,12 +46,12 @@ TEST(AddAssign, ConstTimeStamp) {
 
 //	const duration& operator-=(const duration& d);
 TEST(SubstractAssign, ConstDuration) {
-	clock::duration a = 
-		clock::duration(std::chrono::duration<long, std::micro>(20));
-	clock::duration b = 
-		clock::duration(std::chrono::duration<long, std::micro>(10));
-	clock::duration c = 
-		clock::duration(std::chrono::duration<long, std::micro>(10));
+	Clock::Duration a = 
+		Clock::Duration(std::chrono::duration<long, std::micro>(20));
+	Clock::Duration b = 
+		Clock::Duration(std::chrono::duration<long, std::micro>(10));
+	Clock::Duration c = 
+		Clock::Duration(std::chrono::duration<long, std::micro>(10));
 
 	a -= b;
 	
@@ -60,12 +60,12 @@ TEST(SubstractAssign, ConstDuration) {
 
 //	const duration& operator*=(const int rhs);
 TEST(MultiplyAssign, ConstInt) {
-	clock::duration a = 
-		clock::duration(std::chrono::duration<long, std::micro>(5));
-	clock::duration b = 
-		clock::duration(std::chrono::duration<long, std::micro>(10));
-	clock::duration c = 
-		clock::duration(std::chrono::duration<long, std::micro>(5));
+	Clock::Duration a = 
+		Clock::Duration(std::chrono::duration<long, std::micro>(5));
+	Clock::Duration b = 
+		Clock::Duration(std::chrono::duration<long, std::micro>(10));
+	Clock::Duration c = 
+		Clock::Duration(std::chrono::duration<long, std::micro>(5));
 	
 	a *= 2;
 	
@@ -75,12 +75,12 @@ TEST(MultiplyAssign, ConstInt) {
 
 //	const duration& operator/=(const int rhs);
 TEST(DivideAssign, ConstInt) {
-	clock::duration a = 
-		clock::duration(std::chrono::duration<long, std::micro>(10));
-	clock::duration b = 
-		clock::duration(std::chrono::duration<long, std::micro>(10));
-	clock::duration c = 
-		clock::duration(std::chrono::duration<long, std::micro>(5));
+	Clock::Duration a = 
+		Clock::Duration(std::chrono::duration<long, std::micro>(10));
+	Clock::Duration b = 
+		Clock::Duration(std::chrono::duration<long, std::micro>(10));
+	Clock::Duration c = 
+		Clock::Duration(std::chrono::duration<long, std::micro>(5));
 
 	a /= 2;
 	
@@ -90,12 +90,12 @@ TEST(DivideAssign, ConstInt) {
 
 //	bool operator==(const duration& rhs) const;
 TEST(IsEqualDuration, Constduration) {
-	clock::duration a = 
-		clock::duration(std::chrono::duration<long, std::micro>(10));
-	clock::duration b = 
-		clock::duration(std::chrono::duration<long, std::micro>(10));
-	clock::duration c = 
-		clock::duration(std::chrono::duration<long, std::micro>(20));
+	Clock::Duration a = 
+		Clock::Duration(std::chrono::duration<long, std::micro>(10));
+	Clock::Duration b = 
+		Clock::Duration(std::chrono::duration<long, std::micro>(10));
+	Clock::Duration c = 
+		Clock::Duration(std::chrono::duration<long, std::micro>(20));
 	
 	EXPECT_TRUE(a == b);
 	EXPECT_FALSE(a == c);
@@ -103,12 +103,12 @@ TEST(IsEqualDuration, Constduration) {
 
 //	bool operator!=(const duration& rhs) const;
 TEST(IsNotEqualDuration, Constduration) {
-	clock::duration a = 
-		clock::duration(std::chrono::duration<long, std::micro>(10));
-	clock::duration b = 
-		clock::duration(std::chrono::duration<long, std::micro>(5));
-	clock::duration c = 
-		clock::duration(std::chrono::duration<long, std::micro>(10));
+	Clock::Duration a = 
+		Clock::Duration(std::chrono::duration<long, std::micro>(10));
+	Clock::Duration b = 
+		Clock::Duration(std::chrono::duration<long, std::micro>(5));
+	Clock::Duration c = 
+		Clock::Duration(std::chrono::duration<long, std::micro>(10));
 	
 	EXPECT_TRUE(a != b);
 	EXPECT_FALSE(a != c);
@@ -116,12 +116,12 @@ TEST(IsNotEqualDuration, Constduration) {
 
 //	bool operator<(const duration& rhs) const;
 TEST(LessThanDuration, Constduration) {
-	clock::duration a = 
-		clock::duration(std::chrono::duration<long, std::micro>(5));
-	clock::duration b = 
-		clock::duration(std::chrono::duration<long, std::micro>(10));
-	clock::duration c = 
-		clock::duration(std::chrono::duration<long, std::micro>(15));
+	Clock::Duration a = 
+		Clock::Duration(std::chrono::duration<long, std::micro>(5));
+	Clock::Duration b = 
+		Clock::Duration(std::chrono::duration<long, std::micro>(10));
+	Clock::Duration c = 
+		Clock::Duration(std::chrono::duration<long, std::micro>(15));
 	
 	EXPECT_TRUE(b < c);
 	EXPECT_FALSE(b < a);
@@ -129,12 +129,12 @@ TEST(LessThanDuration, Constduration) {
 
 //	bool operator<=(const duration& rhs) const;
 TEST(LessOrEqualDuration, Constduration) {
-	clock::duration a = 
-		clock::duration(std::chrono::duration<long, std::micro>(5));
-	clock::duration b = 
-		clock::duration(std::chrono::duration<long, std::micro>(10));
-	clock::duration c = 
-		clock::duration(std::chrono::duration<long, std::micro>(15));
+	Clock::Duration a = 
+		Clock::Duration(std::chrono::duration<long, std::micro>(5));
+	Clock::Duration b = 
+		Clock::Duration(std::chrono::duration<long, std::micro>(10));
+	Clock::Duration c = 
+		Clock::Duration(std::chrono::duration<long, std::micro>(15));
 
 	EXPECT_TRUE(b <= c);
 	EXPECT_TRUE(b <= b);
@@ -143,12 +143,12 @@ TEST(LessOrEqualDuration, Constduration) {
 
 //	bool operator>(const duration& rhs) const;
 TEST(GreaterThanDuration, Constduration) {
-	clock::duration a = 
-		clock::duration(std::chrono::duration<long, std::micro>(5));
-	clock::duration b = 
-		clock::duration(std::chrono::duration<long, std::micro>(10));
-	clock::duration c = 
-		clock::duration(std::chrono::duration<long, std::micro>(15));
+	Clock::Duration a = 
+		Clock::Duration(std::chrono::duration<long, std::micro>(5));
+	Clock::Duration b = 
+		Clock::Duration(std::chrono::duration<long, std::micro>(10));
+	Clock::Duration c = 
+		Clock::Duration(std::chrono::duration<long, std::micro>(15));
 
 	EXPECT_TRUE(b > a);
 	EXPECT_FALSE(b > c);
@@ -156,202 +156,203 @@ TEST(GreaterThanDuration, Constduration) {
 
 //	bool operator>=(const duration& rhs) const;
 TEST(GreaterOrEqualDuration, Constduration) {
-	clock::duration a = 
-		clock::duration(std::chrono::duration<long, std::micro>(5));
-	clock::duration b = 
-		clock::duration(std::chrono::duration<long, std::micro>(10));
-	clock::duration c = 
-		clock::duration(std::chrono::duration<long, std::micro>(15));
+	Clock::Duration a = 
+		Clock::Duration(std::chrono::duration<long, std::micro>(5));
+	Clock::Duration b = 
+		Clock::Duration(std::chrono::duration<long, std::micro>(10));
+	Clock::Duration c = 
+		Clock::Duration(std::chrono::duration<long, std::micro>(15));
 
 	EXPECT_TRUE(b >= a);
 	EXPECT_TRUE(b >= b);
 	EXPECT_FALSE(b >= c);
 }
 
-//	duration operator+(const clock::duration& rhs) const;
+//	duration operator+(const Clock::Duration& rhs) const;
 TEST(AddDuration, ConstClock) {
-	clock::duration a = 
-		clock::duration(std::chrono::duration<long, std::micro>(5));
-	clock::duration b = 
-		clock::duration(std::chrono::duration<long, std::micro>(5));
-	clock::duration c = 
-		clock::duration(std::chrono::duration<long, std::micro>(10));
+	Clock::Duration a = 
+		Clock::Duration(std::chrono::duration<long, std::micro>(5));
+	Clock::Duration b = 
+		Clock::Duration(std::chrono::duration<long, std::micro>(5));
+	Clock::Duration c = 
+		Clock::Duration(std::chrono::duration<long, std::micro>(10));
 
-	clock::duration d = a + b;
+	Clock::Duration d = a + b;
 	
 	EXPECT_EQ(d , c);
 }
 
-//	duration operator-(const clock::duration& rhs) const;
+//	duration operator-(const Clock::Duration& rhs) const;
 TEST(SubstractDuration, ConstClock) {
-	clock::duration a = 
-		clock::duration(std::chrono::duration<long, std::micro>(10));
-	clock::duration b = 
-		clock::duration(std::chrono::duration<long, std::micro>(5));
-	clock::duration c = 
-		clock::duration(std::chrono::duration<long, std::micro>(5));
+	Clock::Duration a = 
+		Clock::Duration(std::chrono::duration<long, std::micro>(10));
+	Clock::Duration b = 
+		Clock::Duration(std::chrono::duration<long, std::micro>(5));
+	Clock::Duration c = 
+		Clock::Duration(std::chrono::duration<long, std::micro>(5));
 	
-	clock::duration d = a - b;
+	Clock::Duration d = a - b;
 	
 	EXPECT_EQ(d, c);
 }
 
 //	duration operator*(const int rhs) const;
 TEST(MultiplyDuration, ConstInt) {
-	clock::duration a = 
-		clock::duration(std::chrono::duration<long, std::micro>(10));
-	clock::duration b = 
-		clock::duration(std::chrono::duration<long, std::micro>(20));
+	Clock::Duration a = 
+		Clock::Duration(std::chrono::duration<long, std::micro>(10));
+	Clock::Duration b = 
+		Clock::Duration(std::chrono::duration<long, std::micro>(20));
 	
-	clock::duration c = a * 2;
+	Clock::Duration c = a * 2;
 	
 	EXPECT_EQ(c, b);
 }
 
 //	duration operator/(const int rhs) const;
 TEST(DivideDuration, ConstInt) {
-	clock::duration a = 
-		clock::duration(std::chrono::duration<long, std::micro>(10));
-	clock::duration b = 
-		clock::duration(std::chrono::duration<long, std::micro>(5));
+	Clock::Duration a = 
+		Clock::Duration(std::chrono::duration<long, std::micro>(10));
+	Clock::Duration b = 
+		Clock::Duration(std::chrono::duration<long, std::micro>(5));
 
-	clock::duration c = a / 2;
+	Clock::Duration c = a / 2;
 
 	EXPECT_EQ(c, b);
 }
 
 /*
-	time_stamp
+	TimeStamp
 */
 
-//	time_stamp();
+//	TimeStamp();
 TEST(ConstructorTimeStamp, Default) {
 	std::chrono::high_resolution_clock::time_point t = 
 		std::chrono::high_resolution_clock::now();
-	clock::time_stamp a = clock::time_stamp();
+	Clock::TimeStamp a = Clock::TimeStamp();
+
 	std::time_t t1 = std::chrono::high_resolution_clock::to_time_t(t);
 	std::time_t a1 = std::chrono::high_resolution_clock::to_time_t(a.m_time_stamp);
 	
 	EXPECT_EQ(a1, t1);
 }
 
-//	time_stamp(const std::chrono::time_point<std::chrono::high_resolution_clock>& arg);
+//	TimeStamp(const std::chrono::time_point<std::chrono::high_resolution_clock>& arg);
 TEST(ConstructorTimeStamp, Argument) {
 	std::chrono::high_resolution_clock::time_point t1 = 
 		std::chrono::high_resolution_clock::now();
-	clock::time_stamp a = clock::time_stamp(t1);
+	Clock::TimeStamp a = Clock::TimeStamp(t1);
 	
 	EXPECT_EQ(a, t1);
 }
 
-//	time_stamp(const time_stamp& arg) = default;
+//	TimeStamp(const TimeStamp& arg) = default;
 TEST(ConstructorTimeStamp, Copy){
-	clock::time_stamp a = clock::time_stamp(); //Vanaf standaard constructor
-	clock::time_stamp b = a;
+	Clock::TimeStamp a = Clock::TimeStamp(); //Vanaf standaard constructor
+	Clock::TimeStamp b = a;
 	
 	EXPECT_EQ(a, b) << "Copy constructor maakt gelijke objecten";
 }
 
-//	bool operator==(const clock::time_stamp& rhs) const;
+//	bool operator==(const Clock::TimeStamp& rhs) const;
 TEST(IsEqualTimeStamp, ConstTimeStamp) {
-	clock::time_stamp a = clock::time_stamp(); //Vanaf standaard constructor
-	clock::time_stamp b = a;
+	Clock::TimeStamp a = Clock::TimeStamp(); //Vanaf standaard constructor
+	Clock::TimeStamp b = a;
 	
 	
 	EXPECT_TRUE(a == b) << "Default copy constructor gelijk";
 	
 	std::chrono::high_resolution_clock::time_point t1 = 
 		std::chrono::high_resolution_clock::now(); // Vergelijking vanaf voorgedefineerde tijd
-	a = clock::time_stamp(t1);
-	b = clock::time_stamp(t1);
+	a = Clock::TimeStamp(t1);
+	b = Clock::TimeStamp(t1);
 	
 	EXPECT_TRUE(a == b) << "Equal vanaf time_point constructor";
 
 	std::this_thread::sleep_for(std::chrono::milliseconds(1));
-	b = clock::time_stamp();
+	b = Clock::TimeStamp();
 	EXPECT_FALSE(a == b) << "Returns false voor verschillende timestamps";
 }
 
-//	bool operator!=(const clock::time_stamp& rhs) const;
+//	bool operator!=(const Clock::TimeStamp& rhs) const;
 TEST(IsNotEqualTimeStamp, ConstTimeStamp) {
-	clock::time_stamp a = clock::time_stamp();
+	Clock::TimeStamp a = Clock::TimeStamp();
 	std::this_thread::sleep_for(std::chrono::milliseconds(1));
-	clock::time_stamp b = clock::time_stamp();
+	Clock::TimeStamp b = Clock::TimeStamp();
 	
 	EXPECT_TRUE(a != b) << "2 default constructors ongelijk met Sleep(1ms) ertussen";
 	
 	std::chrono::high_resolution_clock::time_point t1 = 
 		std::chrono::high_resolution_clock::now(); // Vergelijking vanaf voorgedefineerde tijd
-	a = clock::time_stamp(t1);
-	b = clock::time_stamp(t1);
+	a = Clock::TimeStamp(t1);
+	b = Clock::TimeStamp(t1);
 	EXPECT_FALSE(a != b) << "2 gelijke timestamps geven false terug";
 }
 
-//	bool operator<(const clock::time_stamp& rhs) const;
+//	bool operator<(const Clock::TimeStamp& rhs) const;
 TEST(LessThanTimeStamp, ConstTimeStamp) {
-	clock::time_stamp a = clock::time_stamp();
+	Clock::TimeStamp a = Clock::TimeStamp();
 	std::this_thread::sleep_for(std::chrono::milliseconds(1));
-	clock::time_stamp b = clock::time_stamp();
+	Clock::TimeStamp b = Clock::TimeStamp();
 	EXPECT_TRUE(a < b) << "Returns true als a < b";
 	EXPECT_FALSE(b < a) << "Returns false bij b < a";
 	
 	std::chrono::high_resolution_clock::time_point t1 = 
 		std::chrono::high_resolution_clock::now(); // Vergelijking vanaf voorgedefineerde tijd
-	a = clock::time_stamp(t1);
-	b = clock::time_stamp(t1);
+	a = Clock::TimeStamp(t1);
+	b = Clock::TimeStamp(t1);
 	
 	EXPECT_FALSE(a < b) << "Returns false bij gelijke waarde";
 }
 
-//	bool operator<=(const clock::time_stamp& rhs) const;
+//	bool operator<=(const Clock::TimeStamp& rhs) const;
 TEST(LessOrEqualTimeStamp, ConstTimeStamp) {
-	clock::time_stamp a = clock::time_stamp();
+	Clock::TimeStamp a = Clock::TimeStamp();
 	std::this_thread::sleep_for(std::chrono::milliseconds(1));
-	clock::time_stamp b = clock::time_stamp();
+	Clock::TimeStamp b = Clock::TimeStamp();
 	EXPECT_TRUE(a <= b) << "Returns true als a <= b";
 	EXPECT_FALSE(b <= a) << "Returns false als b <= a";
 	
 	std::chrono::high_resolution_clock::time_point t1 = 
 		std::chrono::high_resolution_clock::now(); // Vergelijking vanaf voorgedefineerde tijd
-	a = clock::time_stamp(t1);
-	b = clock::time_stamp(t1);
+	a = Clock::TimeStamp(t1);
+	b = Clock::TimeStamp(t1);
 	
 	EXPECT_TRUE(a <= b) << "Returns true bij gelijke waarde";
 }
 
-//	bool operator>(const clock::time_stamp& rhs) const;
+//	bool operator>(const Clock::TimeStamp& rhs) const;
 TEST(GreaterThanTimeStamp, ConstTimeStamp) {
-	clock::time_stamp b = clock::time_stamp();
+	Clock::TimeStamp b = Clock::TimeStamp();
 	std::this_thread::sleep_for(std::chrono::milliseconds(1));
-	clock::time_stamp a = clock::time_stamp();
+	Clock::TimeStamp a = Clock::TimeStamp();
 	EXPECT_TRUE(a > b) << "Returns true als a > b";
 	EXPECT_FALSE(b > a) << "Returns false als b > a";
 	
 	std::chrono::high_resolution_clock::time_point t1 = 
 		std::chrono::high_resolution_clock::now(); // Vergelijking vanaf voorgedefineerde tijd
-	a = clock::time_stamp(t1);
-	b = clock::time_stamp(t1);
+	a = Clock::TimeStamp(t1);
+	b = Clock::TimeStamp(t1);
 	
 	EXPECT_FALSE(a > b) << "Returns false bij gelijke waarde";
 }
 
-//	bool operator>=(const clock::time_stamp& rhs) const;
+//	bool operator>=(const Clock::TimeStamp& rhs) const;
 TEST(GreaterOrEqualTimeStamp, ConstTimeStamp) {
-	clock::time_stamp b = clock::time_stamp();
+	Clock::TimeStamp b = Clock::TimeStamp();
 	std::this_thread::sleep_for(std::chrono::milliseconds(1));
-	clock::time_stamp a = clock::time_stamp();
+	Clock::TimeStamp a = Clock::TimeStamp();
 	EXPECT_TRUE(a >= b) << "Returns true als a >= b";
 	EXPECT_FALSE(b >= a) << "Returns false als b >= a";
 	
 	std::chrono::high_resolution_clock::time_point t1 = 
 		std::chrono::high_resolution_clock::now(); // Vergelijking vanaf voorgedefineerde tijd
-	a = clock::time_stamp(t1);
-	b = clock::time_stamp(t1);
+	a = Clock::TimeStamp(t1);
+	b = Clock::TimeStamp(t1);
 	
 	EXPECT_TRUE(a >= b) << "Returns true bij gelijke waarde";
 }
 
-//	clock::duration operator-(const clock::time_stamp& rhs) const;
+//	Clock::Duration operator-(const Clock::TimeStamp& rhs) const;
 TEST(SubstractTimeStamp, ConstTimeStamp) {
 	std::chrono::high_resolution_clock::time_point t1 = 
 		std::chrono::high_resolution_clock::now();
@@ -359,19 +360,19 @@ TEST(SubstractTimeStamp, ConstTimeStamp) {
 	std::chrono::high_resolution_clock::time_point t2 = 
 		std::chrono::high_resolution_clock::now();
 	
-	clock::time_stamp a = clock::time_stamp(t1);
-	clock::time_stamp b = clock::time_stamp(t2);
+	Clock::TimeStamp a = Clock::TimeStamp(t1);
+	Clock::TimeStamp b = Clock::TimeStamp(t2);
 	
-	clock::duration d1 = 
-		clock::duration(std::chrono::duration_cast<std::chrono::microseconds>(t2 - t1));
-	clock::duration	d2 = b - a;
+	Clock::Duration d1 = 
+		Clock::Duration(std::chrono::duration_cast<std::chrono::microseconds>(t2 - t1));
+	Clock::Duration	d2 = b - a;
 	EXPECT_EQ(d1, d2);
 	
 	d2 = a - b;
 	EXPECT_NE(d1, d2);
 	
 	d1 = 
-		clock::duration(std::chrono::duration_cast<std::chrono::microseconds>(t1 - t2));
+		Clock::Duration(std::chrono::duration_cast<std::chrono::microseconds>(t1 - t2));
 	EXPECT_EQ(d1, d2);
 }
 
@@ -379,14 +380,14 @@ TEST(SubstractTimeStamp, ConstTimeStamp) {
 	Friend functions
 */
 
-//	clock::time_stamp& operator+=(clock::time_stamp& lhs, const clock::duration& d);
+//	Clock::TimeStamp& operator+=(Clock::TimeStamp& lhs, const Clock::Duration& d);
 TEST(AddAssignTimeStamp, ConstDuration) {
-	clock::duration a = clock::duration(std::chrono::duration<long, std::micro>(10));
-	clock::time_stamp b = 
-		clock::time_stamp(std::chrono::time_point<std::chrono::high_resolution_clock>
+	Clock::Duration a = Clock::Duration(std::chrono::duration<long, std::micro>(10));
+	Clock::TimeStamp b = 
+		Clock::TimeStamp(std::chrono::time_point<std::chrono::high_resolution_clock>
 			(std::chrono::duration<long, std::micro>(5)));
-	clock::time_stamp c = 
-		clock::time_stamp(std::chrono::time_point<std::chrono::high_resolution_clock>
+	Clock::TimeStamp c = 
+		Clock::TimeStamp(std::chrono::time_point<std::chrono::high_resolution_clock>
 			(std::chrono::duration<long, std::micro>(15)));
 
 	b += a;
@@ -394,14 +395,14 @@ TEST(AddAssignTimeStamp, ConstDuration) {
 	EXPECT_EQ(b, c);
 }
 
-//	clock::time_stamp& operator-=(clock::time_stamp& lhs, const clock::duration& d);
+//	Clock::TimeStamp& operator-=(Clock::TimeStamp& lhs, const Clock::Duration& d);
 TEST(SubstractAssignTimeStamp, ConstDuration) {
-	clock::duration a = clock::duration(std::chrono::duration<long, std::micro>(10));
-	clock::time_stamp b = 
-		clock::time_stamp(std::chrono::time_point<std::chrono::high_resolution_clock>
+	Clock::Duration a = Clock::Duration(std::chrono::duration<long, std::micro>(10));
+	Clock::TimeStamp b = 
+		Clock::TimeStamp(std::chrono::time_point<std::chrono::high_resolution_clock>
 			(std::chrono::duration<long, std::micro>(5)));
-	clock::time_stamp c = 
-		clock::time_stamp(std::chrono::time_point<std::chrono::high_resolution_clock>
+	Clock::TimeStamp c = 
+		Clock::TimeStamp(std::chrono::time_point<std::chrono::high_resolution_clock>
 			(std::chrono::duration<long, std::micro>(15)));
 
 	c -= a;
@@ -409,63 +410,63 @@ TEST(SubstractAssignTimeStamp, ConstDuration) {
 	EXPECT_EQ(c, b);
 }
 
-//	clock::time_stamp operator+(const clock::time_stamp& lhs, const clock::duration& rhs);
+//	Clock::TimeStamp operator+(const Clock::TimeStamp& lhs, const Clock::Duration& rhs);
 TEST(AddTimeStamp, ConstDuration) {
-	clock::duration a = clock::duration(std::chrono::duration<long, std::micro>(5));
-	clock::time_stamp b = 
-		clock::time_stamp(std::chrono::time_point<std::chrono::high_resolution_clock>
+	Clock::Duration a = Clock::Duration(std::chrono::duration<long, std::micro>(5));
+	Clock::TimeStamp b = 
+		Clock::TimeStamp(std::chrono::time_point<std::chrono::high_resolution_clock>
 			(std::chrono::duration<long, std::micro>(5)));
-	clock::time_stamp c = 
-		clock::time_stamp(std::chrono::time_point<std::chrono::high_resolution_clock>
+	Clock::TimeStamp c = 
+		Clock::TimeStamp(std::chrono::time_point<std::chrono::high_resolution_clock>
 			(std::chrono::duration<long, std::micro>(10)));
 
-	clock::time_stamp d = b + a;
+	Clock::TimeStamp d = b + a;
 
 	EXPECT_EQ(d, c);
 }
 
-//	clock::time_stamp operator-(const clock::time_stamp& lhs, const clock::duration& rhs);
+//	Clock::TimeStamp operator-(const Clock::TimeStamp& lhs, const Clock::Duration& rhs);
 TEST(SubstractTimeStamp, ConstDuration) {
-	clock::duration a = 
-		clock::duration(std::chrono::duration<long, std::micro>(5));
-	clock::time_stamp b = 
-		clock::time_stamp(std::chrono::time_point<std::chrono::high_resolution_clock>
+	Clock::Duration a = 
+		Clock::Duration(std::chrono::duration<long, std::micro>(5));
+	Clock::TimeStamp b = 
+		Clock::TimeStamp(std::chrono::time_point<std::chrono::high_resolution_clock>
 			(std::chrono::duration<long, std::micro>(15)));
-	clock::time_stamp c = 
-		clock::time_stamp(std::chrono::time_point<std::chrono::high_resolution_clock>
+	Clock::TimeStamp c = 
+		Clock::TimeStamp(std::chrono::time_point<std::chrono::high_resolution_clock>
 			(std::chrono::duration<long, std::micro>(10)));
 
-	clock::time_stamp d = b - a;
+	Clock::TimeStamp d = b - a;
 
 	EXPECT_EQ(d, c);
 }
 
-//	clock::time_stamp operator+(const clock::duration& lhs, const clock::time_stamp& rhs);
+//	Clock::TimeStamp operator+(const Clock::Duration& lhs, const Clock::TimeStamp& rhs);
 TEST(AddDuration, ConstTimeStamp) {
-	clock::duration a = clock::duration(std::chrono::duration<long, std::micro>(5));
-	clock::time_stamp b = 
-		clock::time_stamp(std::chrono::time_point<std::chrono::high_resolution_clock>
+	Clock::Duration a = Clock::Duration(std::chrono::duration<long, std::micro>(5));
+	Clock::TimeStamp b = 
+		Clock::TimeStamp(std::chrono::time_point<std::chrono::high_resolution_clock>
 			(std::chrono::duration<long, std::micro>(5)));
-	clock::time_stamp c = 
-		clock::time_stamp(std::chrono::time_point<std::chrono::high_resolution_clock>
+	Clock::TimeStamp c = 
+		Clock::TimeStamp(std::chrono::time_point<std::chrono::high_resolution_clock>
 			(std::chrono::duration<long, std::micro>(10)));
 
-	clock::time_stamp d = a + b;
+	Clock::TimeStamp d = a + b;
 
 	EXPECT_EQ(d, c);
 }
 
-//	std::ostream & operator<<(std::ostream & s, const clock::duration & rhs);
+//	std::ostream & operator<<(std::ostream & s, const Clock::Duration & rhs);
 TEST(ShiftLeft, StreamDuration) {
-	clock::duration a = clock::duration(std::chrono::duration<long, std::micro>(5));
+	Clock::Duration a = Clock::Duration(std::chrono::duration<long, std::micro>(5));
 
 	std::cout << a << std::endl;
 }
 
-//	std::ostream & operator<<(std::ostream & s, const clock::time_stamp &rhs);
+//	std::ostream & operator<<(std::ostream & s, const Clock::TimeStamp &rhs);
 TEST(ShiftLeft, StreamTimeStamp) {
-	clock::time_stamp a = 
-		clock::time_stamp(std::chrono::time_point<std::chrono::high_resolution_clock>
+	Clock::TimeStamp a = 
+		Clock::TimeStamp(std::chrono::time_point<std::chrono::high_resolution_clock>
 			(std::chrono::duration<long, std::micro>(5)));
 
 	std::cout << a << std::endl;

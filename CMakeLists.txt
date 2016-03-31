@@ -17,4 +17,4 @@ ADD_LIBRARY(gtest_main ../deps/gtest-1.7.0/src/gtest_main.cc)
 SET( CMAKE_CXX_FLAGS  "${CMAKE_CXX_FLAGS} -std=c++11" )
 
 add_executable(clock_test ${GTEST} ${SOURCES_GTEST} ${SOURCES})
-target_link_libraries(clock_test gtest gtest_main ${CMAKE_THREAD_LIBS_INIT})
+target_link_libraries(clock_test gtest gtest_main ${CMAKE_THREAD_LIBS_INIT} pthread)

@@ -1,7 +1,8 @@
 #include <iostream>
 #include <thread>
-#include "gtest\gtest.h"
-#include "..\source\include\clock.hpp"
+#include <typeinfo>
+#include "gtest/gtest.h"
+#include "../source/include/clock.hpp"
 
 
 
@@ -187,9 +188,12 @@ TEST(DivideDuration, ConstInt) {
 
 //	time_stamp();
 TEST(ConstructorTimeStamp, Default) {
+	std::chrono::high_resolution_clock::time_point t = std::chrono::high_resolution_clock::now();
 	clock::time_stamp a = clock::time_stamp();
+	std::time_t t1 = std::chrono::high_resolution_clock::to_time_t(t);
+	std::time_t a1 = std::chrono::high_resolution_clock::to_time_t(a.m_time_stamp);
 	
-	EXPECT_EQ(a, (std::chrono::high_resolution_clock::now()));
+	EXPECT_EQ(a1, t1);
 }
 
 //	time_stamp(const std::chrono::time_point<std::chrono::high_resolution_clock>& arg);

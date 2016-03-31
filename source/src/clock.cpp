@@ -92,7 +92,6 @@ clock::time_stamp::time_stamp(const std::chrono::time_point<std::chrono::high_re
 	this->m_time_stamp = arg;
 }
 
-
 bool clock::time_stamp::operator==(const clock::time_stamp& rhs) const {
 	return this->m_time_stamp == rhs.m_time_stamp;
 }

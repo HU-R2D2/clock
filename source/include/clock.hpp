@@ -209,14 +209,12 @@ class clock::duration {
 		friend std::ostream& operator<<(std::ostream &s, const clock::duration& rhs);
 };
 	
-class clock::time_stamp {
-		
-	private: /* Members */
-		
-		//! \m_time_stamp is a high_resolution_clock which represents the clock with the smallest tick period.
-		std::chrono::time_point<std::chrono::high_resolution_clock> m_time_stamp;
+class clock::time_stamp {		
 
 	public: /* Constructors */
+
+		//! \m_time_stamp is a high_resolution_clock which represents the clock with the smallest tick period.
+		std::chrono::time_point<std::chrono::high_resolution_clock> m_time_stamp;
 		
 		//! Default empty constructor
 		time_stamp();
@@ -226,7 +224,7 @@ class clock::time_stamp {
 		
 		//! Default copy constructor
 		time_stamp(const time_stamp& arg) = default;
-		
+
 	public: /*Operators*/
 	
 		//! The operator ==

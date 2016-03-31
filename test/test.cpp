@@ -3,9 +3,9 @@
 #include "gtest/gtest.h"
 #include "../source/include/Clock.hpp"
 
-/*
-	duration
-*/
+// ====================
+//	duration
+// ====================
 
 //	duration();
 TEST(ConstructorDuration, Default) {
@@ -220,9 +220,9 @@ TEST(DivideDuration, ConstInt) {
 	EXPECT_EQ(c, b);
 }
 
-/*
-	TimeStamp
-*/
+// ====================
+//	TimeStamp
+// ====================
 
 //	TimeStamp();
 TEST(ConstructorTimeStamp, Default) {
@@ -247,30 +247,30 @@ TEST(ConstructorTimeStamp, Argument) {
 
 //	TimeStamp(const TimeStamp& arg) = default;
 TEST(ConstructorTimeStamp, Copy){
-	Clock::TimeStamp a = Clock::TimeStamp(); //Vanaf standaard constructor
+	Clock::TimeStamp a = Clock::TimeStamp();
 	Clock::TimeStamp b = a;
 	
-	EXPECT_EQ(a, b) << "Copy constructor maakt gelijke objecten";
+	EXPECT_EQ(a, b);
 }
 
 //	bool operator==(const Clock::TimeStamp& rhs) const;
 TEST(IsEqualTimeStamp, ConstTimeStamp) {
-	Clock::TimeStamp a = Clock::TimeStamp(); //Vanaf standaard constructor
+	Clock::TimeStamp a = Clock::TimeStamp();
 	Clock::TimeStamp b = a;
 	
 	
-	EXPECT_TRUE(a == b) << "Default copy constructor gelijk";
+	EXPECT_TRUE(a == b);
 	
-	std::chrono::high_resolution_clock::time_point t1 = 
-		std::chrono::high_resolution_clock::now(); // Vergelijking vanaf voorgedefineerde tijd
+	std::chrono::high_resolution_clock::time_point t1 =
+		std::chrono::high_resolution_clock::now();
 	a = Clock::TimeStamp(t1);
 	b = Clock::TimeStamp(t1);
 	
-	EXPECT_TRUE(a == b) << "Equal vanaf time_point constructor";
+	EXPECT_TRUE(a == b);
 
 	std::this_thread::sleep_for(std::chrono::milliseconds(1));
 	b = Clock::TimeStamp();
-	EXPECT_FALSE(a == b) << "Returns false voor verschillende timestamps";
+	EXPECT_FALSE(a == b);
 }
 
 //	bool operator!=(const Clock::TimeStamp& rhs) const;
@@ -279,13 +279,13 @@ TEST(IsNotEqualTimeStamp, ConstTimeStamp) {
 	std::this_thread::sleep_for(std::chrono::milliseconds(1));
 	Clock::TimeStamp b = Clock::TimeStamp();
 	
-	EXPECT_TRUE(a != b) << "2 default constructors ongelijk met Sleep(1ms) ertussen";
+	EXPECT_TRUE(a != b);
 	
 	std::chrono::high_resolution_clock::time_point t1 = 
-		std::chrono::high_resolution_clock::now(); // Vergelijking vanaf voorgedefineerde tijd
+		std::chrono::high_resolution_clock::now();
 	a = Clock::TimeStamp(t1);
 	b = Clock::TimeStamp(t1);
-	EXPECT_FALSE(a != b) << "2 gelijke timestamps geven false terug";
+	EXPECT_FALSE(a != b);
 }
 
 //	bool operator<(const Clock::TimeStamp& rhs) const;
@@ -293,15 +293,15 @@ TEST(LessThanTimeStamp, ConstTimeStamp) {
 	Clock::TimeStamp a = Clock::TimeStamp();
 	std::this_thread::sleep_for(std::chrono::milliseconds(1));
 	Clock::TimeStamp b = Clock::TimeStamp();
-	EXPECT_TRUE(a < b) << "Returns true als a < b";
-	EXPECT_FALSE(b < a) << "Returns false bij b < a";
+	EXPECT_TRUE(a < b);
+	EXPECT_FALSE(b < a);
 	
 	std::chrono::high_resolution_clock::time_point t1 = 
-		std::chrono::high_resolution_clock::now(); // Vergelijking vanaf voorgedefineerde tijd
+		std::chrono::high_resolution_clock::now();
 	a = Clock::TimeStamp(t1);
 	b = Clock::TimeStamp(t1);
 	
-	EXPECT_FALSE(a < b) << "Returns false bij gelijke waarde";
+	EXPECT_FALSE(a < b);
 }
 
 //	bool operator<=(const Clock::TimeStamp& rhs) const;
@@ -309,15 +309,15 @@ TEST(LessOrEqualTimeStamp, ConstTimeStamp) {
 	Clock::TimeStamp a = Clock::TimeStamp();
 	std::this_thread::sleep_for(std::chrono::milliseconds(1));
 	Clock::TimeStamp b = Clock::TimeStamp();
-	EXPECT_TRUE(a <= b) << "Returns true als a <= b";
-	EXPECT_FALSE(b <= a) << "Returns false als b <= a";
+	EXPECT_TRUE(a <= b);
+	EXPECT_FALSE(b <= a);
 	
 	std::chrono::high_resolution_clock::time_point t1 = 
-		std::chrono::high_resolution_clock::now(); // Vergelijking vanaf voorgedefineerde tijd
+		std::chrono::high_resolution_clock::now();
 	a = Clock::TimeStamp(t1);
 	b = Clock::TimeStamp(t1);
 	
-	EXPECT_TRUE(a <= b) << "Returns true bij gelijke waarde";
+	EXPECT_TRUE(a <= b);
 }
 
 //	bool operator>(const Clock::TimeStamp& rhs) const;
@@ -325,15 +325,15 @@ TEST(GreaterThanTimeStamp, ConstTimeStamp) {
 	Clock::TimeStamp b = Clock::TimeStamp();
 	std::this_thread::sleep_for(std::chrono::milliseconds(1));
 	Clock::TimeStamp a = Clock::TimeStamp();
-	EXPECT_TRUE(a > b) << "Returns true als a > b";
-	EXPECT_FALSE(b > a) << "Returns false als b > a";
+	EXPECT_TRUE(a > b);
+	EXPECT_FALSE(b > a);
 	
 	std::chrono::high_resolution_clock::time_point t1 = 
-		std::chrono::high_resolution_clock::now(); // Vergelijking vanaf voorgedefineerde tijd
+		std::chrono::high_resolution_clock::now();
 	a = Clock::TimeStamp(t1);
 	b = Clock::TimeStamp(t1);
 	
-	EXPECT_FALSE(a > b) << "Returns false bij gelijke waarde";
+	EXPECT_FALSE(a > b);
 }
 
 //	bool operator>=(const Clock::TimeStamp& rhs) const;
@@ -341,15 +341,15 @@ TEST(GreaterOrEqualTimeStamp, ConstTimeStamp) {
 	Clock::TimeStamp b = Clock::TimeStamp();
 	std::this_thread::sleep_for(std::chrono::milliseconds(1));
 	Clock::TimeStamp a = Clock::TimeStamp();
-	EXPECT_TRUE(a >= b) << "Returns true als a >= b";
-	EXPECT_FALSE(b >= a) << "Returns false als b >= a";
+	EXPECT_TRUE(a >= b);
+	EXPECT_FALSE(b >= a);
 	
 	std::chrono::high_resolution_clock::time_point t1 = 
-		std::chrono::high_resolution_clock::now(); // Vergelijking vanaf voorgedefineerde tijd
+		std::chrono::high_resolution_clock::now();
 	a = Clock::TimeStamp(t1);
 	b = Clock::TimeStamp(t1);
 	
-	EXPECT_TRUE(a >= b) << "Returns true bij gelijke waarde";
+	EXPECT_TRUE(a >= b);
 }
 
 //	Clock::Duration operator-(const Clock::TimeStamp& rhs) const;
@@ -376,9 +376,9 @@ TEST(SubstractTimeStamp, ConstTimeStamp) {
 	EXPECT_EQ(d1, d2);
 }
 
-/*
-	Friend functions
-*/
+// ====================
+//	Friend functions
+// ====================
 
 //	Clock::TimeStamp& operator+=(Clock::TimeStamp& lhs, const Clock::Duration& d);
 TEST(AddAssignTimeStamp, ConstDuration) {

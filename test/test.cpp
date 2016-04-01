@@ -25,7 +25,7 @@ TEST(ConstructorDuration, Argument) {
 //	duration(const duration& arg) = default;
 TEST(ConstructorDuration, Copy) {
 	Clock::Duration a = Clock::Duration();
-	Clock::Duration b = a;
+	Clock::Duration b(a);
 	
 	EXPECT_EQ(a, b);
 }
@@ -248,7 +248,7 @@ TEST(ConstructorTimeStamp, Argument) {
 //	TimeStamp(const TimeStamp& arg) = default;
 TEST(ConstructorTimeStamp, Copy){
 	Clock::TimeStamp a = Clock::TimeStamp();
-	Clock::TimeStamp b = a;
+	Clock::TimeStamp b(a);
 	
 	EXPECT_EQ(a, b);
 }

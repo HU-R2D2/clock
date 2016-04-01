@@ -1,0 +1,163 @@
+\hypertarget{_clock_8cpp}{}\section{C\+:/\+Users/waila/\+Documents/\+Git\+Hub/clock/source/src/\+Clock.cpp File Reference}
+\label{_clock_8cpp}\index{C\+:/\+Users/waila/\+Documents/\+Git\+Hub/clock/source/src/\+Clock.\+cpp@{C\+:/\+Users/waila/\+Documents/\+Git\+Hub/clock/source/src/\+Clock.\+cpp}}
+{\ttfamily \#include \char`\"{}../include/\+Clock.\+hpp\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_clock_1_1_time_stamp}{Clock\+::\+Time\+Stamp} \& \hyperlink{_clock_8cpp_a4ba2a6872ed75f179345c471182c67dc}{operator+=} (\hyperlink{class_clock_1_1_time_stamp}{Clock\+::\+Time\+Stamp} \&lhs, const \hyperlink{class_clock_1_1_duration}{Clock\+::\+Duration} \&d)
+\item 
+\hyperlink{class_clock_1_1_time_stamp}{Clock\+::\+Time\+Stamp} \& \hyperlink{_clock_8cpp_ae528b7884dfc30e2a28f00c07aa20d24}{operator-\/=} (\hyperlink{class_clock_1_1_time_stamp}{Clock\+::\+Time\+Stamp} \&lhs, const \hyperlink{class_clock_1_1_duration}{Clock\+::\+Duration} \&d)
+\item 
+\hyperlink{class_clock_1_1_time_stamp}{Clock\+::\+Time\+Stamp} \hyperlink{_clock_8cpp_a0c03a6eab08831e78e238ba6498c40a7}{operator+} (const \hyperlink{class_clock_1_1_time_stamp}{Clock\+::\+Time\+Stamp} \&lhs, const \hyperlink{class_clock_1_1_duration}{Clock\+::\+Duration} \&rhs)
+\item 
+\hyperlink{class_clock_1_1_time_stamp}{Clock\+::\+Time\+Stamp} \hyperlink{_clock_8cpp_ac693b02ffb2e0b8b9c402642f7f0169f}{operator-\/} (const \hyperlink{class_clock_1_1_time_stamp}{Clock\+::\+Time\+Stamp} \&lhs, const \hyperlink{class_clock_1_1_duration}{Clock\+::\+Duration} \&rhs)
+\item 
+\hyperlink{class_clock_1_1_time_stamp}{Clock\+::\+Time\+Stamp} \hyperlink{_clock_8cpp_a829ab58b50ec9125fe832b4dfad2cea4}{operator+} (const \hyperlink{class_clock_1_1_duration}{Clock\+::\+Duration} \&lhs, const \hyperlink{class_clock_1_1_time_stamp}{Clock\+::\+Time\+Stamp} \&rhs)
+\item 
+std\+::ostream \& \hyperlink{_clock_8cpp_ac26e3a3eb0bc2e0f2e49dbb86e484dad}{operator$<$$<$} (std\+::ostream \&s, const \hyperlink{class_clock_1_1_duration}{Clock\+::\+Duration} \&rhs)
+\item 
+std\+::ostream \& \hyperlink{_clock_8cpp_a9201b9995d10f34386b474b72ec36407}{operator$<$$<$} (std\+::ostream \&s, const \hyperlink{class_clock_1_1_time_stamp}{Clock\+::\+Time\+Stamp} \&rhs)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{Clock.\+cpp@{Clock.\+cpp}!operator+@{operator+}}
+\index{operator+@{operator+}!Clock.\+cpp@{Clock.\+cpp}}
+\subsubsection[{\texorpdfstring{operator+(const Clock\+::\+Time\+Stamp \&lhs, const Clock\+::\+Duration \&rhs)}{operator+(const Clock::TimeStamp &lhs, const Clock::Duration &rhs)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Clock\+::\+Time\+Stamp} operator+ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Clock\+::\+Time\+Stamp} \&}]{lhs, }
+\item[{const {\bf Clock\+::\+Duration} \&}]{rhs}
+\end{DoxyParamCaption}
+)}\hypertarget{_clock_8cpp_a0c03a6eab08831e78e238ba6498c40a7}{}\label{_clock_8cpp_a0c03a6eab08831e78e238ba6498c40a7}
+The operator +
+
+Used to add a Duration to a Time\+Stamp 
+\begin{DoxyParams}{Parameters}
+{\em lhs} & is a \hyperlink{class_clock_1_1_time_stamp}{Clock\+::\+Time\+Stamp} \\
+\hline
+{\em d} & is a \hyperlink{class_clock_1_1_duration}{Clock\+::\+Duration} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{class_clock_1_1_time_stamp}{Clock\+::\+Time\+Stamp} object with the changed value 
+\end{DoxyReturn}
+\index{Clock.\+cpp@{Clock.\+cpp}!operator+@{operator+}}
+\index{operator+@{operator+}!Clock.\+cpp@{Clock.\+cpp}}
+\subsubsection[{\texorpdfstring{operator+(const Clock\+::\+Duration \&lhs, const Clock\+::\+Time\+Stamp \&rhs)}{operator+(const Clock::Duration &lhs, const Clock::TimeStamp &rhs)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Clock\+::\+Time\+Stamp} operator+ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Clock\+::\+Duration} \&}]{lhs, }
+\item[{const {\bf Clock\+::\+Time\+Stamp} \&}]{rhs}
+\end{DoxyParamCaption}
+)}\hypertarget{_clock_8cpp_a829ab58b50ec9125fe832b4dfad2cea4}{}\label{_clock_8cpp_a829ab58b50ec9125fe832b4dfad2cea4}
+The operator +(plus)
+
+Used to add a Duration to a Time\+Stamp 
+\begin{DoxyParams}{Parameters}
+{\em lhs} & is a \hyperlink{class_clock_1_1_duration}{Clock\+::\+Duration} \\
+\hline
+{\em rhs} & is a \hyperlink{class_clock_1_1_time_stamp}{Clock\+::\+Time\+Stamp} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{class_clock_1_1_time_stamp}{Clock\+::\+Time\+Stamp} object with the changed value 
+\end{DoxyReturn}
+\index{Clock.\+cpp@{Clock.\+cpp}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!Clock.\+cpp@{Clock.\+cpp}}
+\subsubsection[{\texorpdfstring{operator+=(\+Clock\+::\+Time\+Stamp \&lhs, const Clock\+::\+Duration \&d)}{operator+=(Clock::TimeStamp &lhs, const Clock::Duration &d)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Clock\+::\+Time\+Stamp}\& operator+= (
+\begin{DoxyParamCaption}
+\item[{{\bf Clock\+::\+Time\+Stamp} \&}]{lhs, }
+\item[{const {\bf Clock\+::\+Duration} \&}]{d}
+\end{DoxyParamCaption}
+)}\hypertarget{_clock_8cpp_a4ba2a6872ed75f179345c471182c67dc}{}\label{_clock_8cpp_a4ba2a6872ed75f179345c471182c67dc}
+The operator +=
+
+Used to add and assign a Duration to a Time\+Stamp 
+\begin{DoxyParams}{Parameters}
+{\em lhs} & is a \hyperlink{class_clock_1_1_time_stamp}{Clock\+::\+Time\+Stamp} \\
+\hline
+{\em d} & is a \hyperlink{class_clock_1_1_duration}{Clock\+::\+Duration} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+lhs which is a \hyperlink{class_clock}{Clock}\+:Time\+Stamp 
+\end{DoxyReturn}
+\index{Clock.\+cpp@{Clock.\+cpp}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!Clock.\+cpp@{Clock.\+cpp}}
+\subsubsection[{\texorpdfstring{operator-\/(const Clock\+::\+Time\+Stamp \&lhs, const Clock\+::\+Duration \&rhs)}{operator-(const Clock::TimeStamp &lhs, const Clock::Duration &rhs)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Clock\+::\+Time\+Stamp} operator-\/ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Clock\+::\+Time\+Stamp} \&}]{lhs, }
+\item[{const {\bf Clock\+::\+Duration} \&}]{rhs}
+\end{DoxyParamCaption}
+)}\hypertarget{_clock_8cpp_ac693b02ffb2e0b8b9c402642f7f0169f}{}\label{_clock_8cpp_ac693b02ffb2e0b8b9c402642f7f0169f}
+The operator -\/
+
+Used to substract a Time\+Stamp with a Duration 
+\begin{DoxyParams}{Parameters}
+{\em lhs} & is a \hyperlink{class_clock_1_1_duration}{Clock\+::\+Duration} \\
+\hline
+{\em rhs} & is a \hyperlink{class_clock_1_1_time_stamp}{Clock\+::\+Time\+Stamp} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{class_clock_1_1_time_stamp}{Clock\+::\+Time\+Stamp} object with the changed value 
+\end{DoxyReturn}
+\index{Clock.\+cpp@{Clock.\+cpp}!operator-\/=@{operator-\/=}}
+\index{operator-\/=@{operator-\/=}!Clock.\+cpp@{Clock.\+cpp}}
+\subsubsection[{\texorpdfstring{operator-\/=(\+Clock\+::\+Time\+Stamp \&lhs, const Clock\+::\+Duration \&d)}{operator-=(Clock::TimeStamp &lhs, const Clock::Duration &d)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Clock\+::\+Time\+Stamp}\& operator-\/= (
+\begin{DoxyParamCaption}
+\item[{{\bf Clock\+::\+Time\+Stamp} \&}]{lhs, }
+\item[{const {\bf Clock\+::\+Duration} \&}]{d}
+\end{DoxyParamCaption}
+)}\hypertarget{_clock_8cpp_ae528b7884dfc30e2a28f00c07aa20d24}{}\label{_clock_8cpp_ae528b7884dfc30e2a28f00c07aa20d24}
+The operator -\/=
+
+Used to substract and assign a Time\+Stamp with a Duration 
+\begin{DoxyParams}{Parameters}
+{\em lhs} & is a \hyperlink{class_clock_1_1_time_stamp}{Clock\+::\+Time\+Stamp} \\
+\hline
+{\em d} & is a \hyperlink{class_clock_1_1_duration}{Clock\+::\+Duration} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+lhs which is a \hyperlink{class_clock}{Clock}\+:Time\+Stamp 
+\end{DoxyReturn}
+\index{Clock.\+cpp@{Clock.\+cpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Clock.\+cpp@{Clock.\+cpp}}
+\subsubsection[{\texorpdfstring{operator$<$$<$(std\+::ostream \&s, const Clock\+::\+Duration \&rhs)}{operator<<(std::ostream &s, const Clock::Duration &rhs)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{s, }
+\item[{const {\bf Clock\+::\+Duration} \&}]{rhs}
+\end{DoxyParamCaption}
+)}\hypertarget{_clock_8cpp_ac26e3a3eb0bc2e0f2e49dbb86e484dad}{}\label{_clock_8cpp_ac26e3a3eb0bc2e0f2e49dbb86e484dad}
+The operator $<$$<$ for \hyperlink{class_clock_1_1_duration}{Clock\+::\+Duration}
+
+Used to shift a Duration in an ostream 
+\begin{DoxyParams}{Parameters}
+{\em s} & is a std\+::ostream \\
+\hline
+{\em rhs} & is a \hyperlink{class_clock_1_1_duration}{Clock\+::\+Duration} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+s which is a std\+::ostream 
+\end{DoxyReturn}
+\index{Clock.\+cpp@{Clock.\+cpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Clock.\+cpp@{Clock.\+cpp}}
+\subsubsection[{\texorpdfstring{operator$<$$<$(std\+::ostream \&s, const Clock\+::\+Time\+Stamp \&rhs)}{operator<<(std::ostream &s, const Clock::TimeStamp &rhs)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{s, }
+\item[{const {\bf Clock\+::\+Time\+Stamp} \&}]{rhs}
+\end{DoxyParamCaption}
+)}\hypertarget{_clock_8cpp_a9201b9995d10f34386b474b72ec36407}{}\label{_clock_8cpp_a9201b9995d10f34386b474b72ec36407}
+The operator $<$$<$ for \hyperlink{class_clock_1_1_time_stamp}{Clock\+::\+Time\+Stamp}
+
+Used to shift a Time\+Stamp in an ostream 
+\begin{DoxyParams}{Parameters}
+{\em s} & is a std\+::ostream \\
+\hline
+{\em rhs} & is a \hyperlink{class_clock_1_1_time_stamp}{Clock\+::\+Time\+Stamp} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+s which is a std\+::ostream 
+\end{DoxyReturn}

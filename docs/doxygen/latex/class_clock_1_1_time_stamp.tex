@@ -1,0 +1,300 @@
+\hypertarget{class_clock_1_1_time_stamp}{}\section{Clock\+:\+:Time\+Stamp Class Reference}
+\label{class_clock_1_1_time_stamp}\index{Clock\+::\+Time\+Stamp@{Clock\+::\+Time\+Stamp}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_clock_1_1_time_stamp_aac68c3609da3356d7b02c7a35c892a23}{Time\+Stamp} ()\hypertarget{class_clock_1_1_time_stamp_aac68c3609da3356d7b02c7a35c892a23}{}\label{class_clock_1_1_time_stamp_aac68c3609da3356d7b02c7a35c892a23}
+
+\begin{DoxyCompactList}\small\item\em Default empty constructor. \end{DoxyCompactList}\item 
+\hyperlink{class_clock_1_1_time_stamp_af60062cc13bad94c9de46c93c7c9d4cd}{Time\+Stamp} (const std\+::chrono\+::time\+\_\+point$<$ std\+::chrono\+::high\+\_\+resolution\+\_\+clock $>$ \&arg)\hypertarget{class_clock_1_1_time_stamp_af60062cc13bad94c9de46c93c7c9d4cd}{}\label{class_clock_1_1_time_stamp_af60062cc13bad94c9de46c93c7c9d4cd}
+
+\begin{DoxyCompactList}\small\item\em Initialization constructor. \end{DoxyCompactList}\item 
+\hyperlink{class_clock_1_1_time_stamp_a9232a95105c59c2154373b6bd1459c87}{Time\+Stamp} (const \hyperlink{class_clock_1_1_time_stamp}{Time\+Stamp} \&arg)=default\hypertarget{class_clock_1_1_time_stamp_a9232a95105c59c2154373b6bd1459c87}{}\label{class_clock_1_1_time_stamp_a9232a95105c59c2154373b6bd1459c87}
+
+\begin{DoxyCompactList}\small\item\em Default copy constructor. \end{DoxyCompactList}\item 
+bool \hyperlink{class_clock_1_1_time_stamp_aa8fa25595ceb6d8300a31a475eeba2b7}{operator==} (const \hyperlink{class_clock_1_1_time_stamp}{Clock\+::\+Time\+Stamp} \&rhs) const 
+\item 
+bool \hyperlink{class_clock_1_1_time_stamp_a1786b6d74147561e4a4885d1a331c739}{operator!=} (const \hyperlink{class_clock_1_1_time_stamp}{Clock\+::\+Time\+Stamp} \&rhs) const 
+\item 
+bool \hyperlink{class_clock_1_1_time_stamp_af3226e1751b8863a17f344f70140818e}{operator$<$} (const \hyperlink{class_clock_1_1_time_stamp}{Clock\+::\+Time\+Stamp} \&rhs) const 
+\item 
+bool \hyperlink{class_clock_1_1_time_stamp_ab996a7b3a3263f910fe9ab2dcc898086}{operator$<$=} (const \hyperlink{class_clock_1_1_time_stamp}{Clock\+::\+Time\+Stamp} \&rhs) const 
+\item 
+bool \hyperlink{class_clock_1_1_time_stamp_a1cfe16526337665c231ed0d94d065c60}{operator$>$} (const \hyperlink{class_clock_1_1_time_stamp}{Clock\+::\+Time\+Stamp} \&rhs) const 
+\item 
+bool \hyperlink{class_clock_1_1_time_stamp_a17898988ef47d11f1accad6bf58c9d8c}{operator$>$=} (const \hyperlink{class_clock_1_1_time_stamp}{Clock\+::\+Time\+Stamp} \&rhs) const 
+\item 
+\hyperlink{class_clock_1_1_duration}{Clock\+::\+Duration} \hyperlink{class_clock_1_1_time_stamp_a4b876a2d43a8da209174123cfcd77218}{operator-\/} (const \hyperlink{class_clock_1_1_time_stamp}{Clock\+::\+Time\+Stamp} \&rhs) const 
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::chrono\+::time\+\_\+point$<$ std\+::chrono\+::high\+\_\+resolution\+\_\+clock $>$ \hyperlink{class_clock_1_1_time_stamp_a6de590697ea903decd70a91bcc9d4a54}{m\+\_\+time\+\_\+stamp}\hypertarget{class_clock_1_1_time_stamp_a6de590697ea903decd70a91bcc9d4a54}{}\label{class_clock_1_1_time_stamp_a6de590697ea903decd70a91bcc9d4a54}
+
+\begin{DoxyCompactList}\small\item\em is a high\+\_\+resolution\+\_\+clock which represents the \hyperlink{class_clock}{Clock} with the smallest tick period. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_clock_1_1_time_stamp}{Clock\+::\+Time\+Stamp} \& \hyperlink{class_clock_1_1_time_stamp_a4ba2a6872ed75f179345c471182c67dc}{operator+=} (\hyperlink{class_clock_1_1_time_stamp}{Clock\+::\+Time\+Stamp} \&lhs, const \hyperlink{class_clock_1_1_duration}{Clock\+::\+Duration} \&d)
+\item 
+\hyperlink{class_clock_1_1_time_stamp}{Clock\+::\+Time\+Stamp} \& \hyperlink{class_clock_1_1_time_stamp_ae528b7884dfc30e2a28f00c07aa20d24}{operator-\/=} (\hyperlink{class_clock_1_1_time_stamp}{Clock\+::\+Time\+Stamp} \&lhs, const \hyperlink{class_clock_1_1_duration}{Clock\+::\+Duration} \&d)
+\item 
+\hyperlink{class_clock_1_1_time_stamp}{Clock\+::\+Time\+Stamp} \hyperlink{class_clock_1_1_time_stamp_a0c03a6eab08831e78e238ba6498c40a7}{operator+} (const \hyperlink{class_clock_1_1_time_stamp}{Clock\+::\+Time\+Stamp} \&lhs, const \hyperlink{class_clock_1_1_duration}{Clock\+::\+Duration} \&rhs)
+\item 
+\hyperlink{class_clock_1_1_time_stamp}{Clock\+::\+Time\+Stamp} \hyperlink{class_clock_1_1_time_stamp_ac693b02ffb2e0b8b9c402642f7f0169f}{operator-\/} (const \hyperlink{class_clock_1_1_time_stamp}{Clock\+::\+Time\+Stamp} \&lhs, const \hyperlink{class_clock_1_1_duration}{Clock\+::\+Duration} \&rhs)
+\item 
+\hyperlink{class_clock_1_1_time_stamp}{Clock\+::\+Time\+Stamp} \hyperlink{class_clock_1_1_time_stamp_a829ab58b50ec9125fe832b4dfad2cea4}{operator+} (const \hyperlink{class_clock_1_1_duration}{Clock\+::\+Duration} \&lhs, const \hyperlink{class_clock_1_1_time_stamp}{Clock\+::\+Time\+Stamp} \&rhs)
+\item 
+std\+::ostream \& \hyperlink{class_clock_1_1_time_stamp_a9201b9995d10f34386b474b72ec36407}{operator$<$$<$} (std\+::ostream \&s, const \hyperlink{class_clock_1_1_time_stamp}{Clock\+::\+Time\+Stamp} \&rhs)
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\index{Clock\+::\+Time\+Stamp@{Clock\+::\+Time\+Stamp}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!Clock\+::\+Time\+Stamp@{Clock\+::\+Time\+Stamp}}
+\subsubsection[{\texorpdfstring{operator"!=(const Clock\+::\+Time\+Stamp \&rhs) const }{operator!=(const Clock::TimeStamp &rhs) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool Clock\+::\+Time\+Stamp\+::operator!= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Clock\+::\+Time\+Stamp} \&}]{rhs}
+\end{DoxyParamCaption}
+) const}\hypertarget{class_clock_1_1_time_stamp_a1786b6d74147561e4a4885d1a331c739}{}\label{class_clock_1_1_time_stamp_a1786b6d74147561e4a4885d1a331c739}
+The operator !=
+
+Used to test if \hyperlink{class_clock_1_1_time_stamp}{Time\+Stamp} is not equal to another \hyperlink{class_clock_1_1_time_stamp}{Time\+Stamp}. 
+\begin{DoxyParams}{Parameters}
+{\em rhs} & is a \hyperlink{class_clock_1_1_time_stamp}{Time\+Stamp} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\char`\"{}true\char`\"{} if the comparison is true otherwise return \char`\"{}false\char`\"{} 
+\end{DoxyReturn}
+\index{Clock\+::\+Time\+Stamp@{Clock\+::\+Time\+Stamp}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!Clock\+::\+Time\+Stamp@{Clock\+::\+Time\+Stamp}}
+\subsubsection[{\texorpdfstring{operator-\/(const Clock\+::\+Time\+Stamp \&rhs) const }{operator-(const Clock::TimeStamp &rhs) const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Clock\+::\+Duration} Clock\+::\+Time\+Stamp\+::operator-\/ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Clock\+::\+Time\+Stamp} \&}]{rhs}
+\end{DoxyParamCaption}
+) const}\hypertarget{class_clock_1_1_time_stamp_a4b876a2d43a8da209174123cfcd77218}{}\label{class_clock_1_1_time_stamp_a4b876a2d43a8da209174123cfcd77218}
+The operator -\/(minus)
+
+Used to substract a \hyperlink{class_clock_1_1_time_stamp}{Time\+Stamp} with another \hyperlink{class_clock_1_1_time_stamp}{Time\+Stamp} to get a \hyperlink{class_clock_1_1_duration}{Duration} value between them. 
+\begin{DoxyParams}{Parameters}
+{\em rhs} & is a \hyperlink{class_clock_1_1_time_stamp}{Time\+Stamp} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\char`\"{}true\char`\"{} if the comparison is true otherwise return \char`\"{}false\char`\"{} 
+\end{DoxyReturn}
+\index{Clock\+::\+Time\+Stamp@{Clock\+::\+Time\+Stamp}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!Clock\+::\+Time\+Stamp@{Clock\+::\+Time\+Stamp}}
+\subsubsection[{\texorpdfstring{operator$<$(const Clock\+::\+Time\+Stamp \&rhs) const }{operator<(const Clock::TimeStamp &rhs) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool Clock\+::\+Time\+Stamp\+::operator$<$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Clock\+::\+Time\+Stamp} \&}]{rhs}
+\end{DoxyParamCaption}
+) const}\hypertarget{class_clock_1_1_time_stamp_af3226e1751b8863a17f344f70140818e}{}\label{class_clock_1_1_time_stamp_af3226e1751b8863a17f344f70140818e}
+The operator $<$ (smaller)
+
+Used to test if \hyperlink{class_clock_1_1_time_stamp}{Time\+Stamp} is lesser than another \hyperlink{class_clock_1_1_time_stamp}{Time\+Stamp}. 
+\begin{DoxyParams}{Parameters}
+{\em rhs} & is a \hyperlink{class_clock_1_1_duration}{Duration} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\char`\"{}true\char`\"{} if the comparison is true otherwise return \char`\"{}false\char`\"{} 
+\end{DoxyReturn}
+\index{Clock\+::\+Time\+Stamp@{Clock\+::\+Time\+Stamp}!operator$<$=@{operator$<$=}}
+\index{operator$<$=@{operator$<$=}!Clock\+::\+Time\+Stamp@{Clock\+::\+Time\+Stamp}}
+\subsubsection[{\texorpdfstring{operator$<$=(const Clock\+::\+Time\+Stamp \&rhs) const }{operator<=(const Clock::TimeStamp &rhs) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool Clock\+::\+Time\+Stamp\+::operator$<$= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Clock\+::\+Time\+Stamp} \&}]{rhs}
+\end{DoxyParamCaption}
+) const}\hypertarget{class_clock_1_1_time_stamp_ab996a7b3a3263f910fe9ab2dcc898086}{}\label{class_clock_1_1_time_stamp_ab996a7b3a3263f910fe9ab2dcc898086}
+The operator $<$= (smaller or equal)
+
+Used to test if \hyperlink{class_clock_1_1_time_stamp}{Time\+Stamp} is lesser than or equal to another \hyperlink{class_clock_1_1_time_stamp}{Time\+Stamp}. 
+\begin{DoxyParams}{Parameters}
+{\em rhs} & is a \hyperlink{class_clock_1_1_duration}{Duration} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\char`\"{}true\char`\"{} if the comparison is true otherwise return \char`\"{}false\char`\"{} 
+\end{DoxyReturn}
+\index{Clock\+::\+Time\+Stamp@{Clock\+::\+Time\+Stamp}!operator==@{operator==}}
+\index{operator==@{operator==}!Clock\+::\+Time\+Stamp@{Clock\+::\+Time\+Stamp}}
+\subsubsection[{\texorpdfstring{operator==(const Clock\+::\+Time\+Stamp \&rhs) const }{operator==(const Clock::TimeStamp &rhs) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool Clock\+::\+Time\+Stamp\+::operator== (
+\begin{DoxyParamCaption}
+\item[{const {\bf Clock\+::\+Time\+Stamp} \&}]{rhs}
+\end{DoxyParamCaption}
+) const}\hypertarget{class_clock_1_1_time_stamp_aa8fa25595ceb6d8300a31a475eeba2b7}{}\label{class_clock_1_1_time_stamp_aa8fa25595ceb6d8300a31a475eeba2b7}
+The operator ==
+
+Used to test if \hyperlink{class_clock_1_1_time_stamp}{Time\+Stamp} is equal to another \hyperlink{class_clock_1_1_time_stamp}{Time\+Stamp}. 
+\begin{DoxyParams}{Parameters}
+{\em rhs} & is a \hyperlink{class_clock_1_1_time_stamp}{Time\+Stamp} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\char`\"{}true\char`\"{} if the comparison is true otherwise return \char`\"{}false\char`\"{} 
+\end{DoxyReturn}
+\index{Clock\+::\+Time\+Stamp@{Clock\+::\+Time\+Stamp}!operator$>$@{operator$>$}}
+\index{operator$>$@{operator$>$}!Clock\+::\+Time\+Stamp@{Clock\+::\+Time\+Stamp}}
+\subsubsection[{\texorpdfstring{operator$>$(const Clock\+::\+Time\+Stamp \&rhs) const }{operator>(const Clock::TimeStamp &rhs) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool Clock\+::\+Time\+Stamp\+::operator$>$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Clock\+::\+Time\+Stamp} \&}]{rhs}
+\end{DoxyParamCaption}
+) const}\hypertarget{class_clock_1_1_time_stamp_a1cfe16526337665c231ed0d94d065c60}{}\label{class_clock_1_1_time_stamp_a1cfe16526337665c231ed0d94d065c60}
+The operator $>$ (bigger)
+
+Used to test if \hyperlink{class_clock_1_1_time_stamp}{Time\+Stamp} is greater than another \hyperlink{class_clock_1_1_time_stamp}{Time\+Stamp}. 
+\begin{DoxyParams}{Parameters}
+{\em rhs} & is a \hyperlink{class_clock_1_1_duration}{Duration} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\char`\"{}true\char`\"{} if the comparison is true otherwise return \char`\"{}false\char`\"{} 
+\end{DoxyReturn}
+\index{Clock\+::\+Time\+Stamp@{Clock\+::\+Time\+Stamp}!operator$>$=@{operator$>$=}}
+\index{operator$>$=@{operator$>$=}!Clock\+::\+Time\+Stamp@{Clock\+::\+Time\+Stamp}}
+\subsubsection[{\texorpdfstring{operator$>$=(const Clock\+::\+Time\+Stamp \&rhs) const }{operator>=(const Clock::TimeStamp &rhs) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool Clock\+::\+Time\+Stamp\+::operator$>$= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Clock\+::\+Time\+Stamp} \&}]{rhs}
+\end{DoxyParamCaption}
+) const}\hypertarget{class_clock_1_1_time_stamp_a17898988ef47d11f1accad6bf58c9d8c}{}\label{class_clock_1_1_time_stamp_a17898988ef47d11f1accad6bf58c9d8c}
+The operator $>$= (bigger or equal)
+
+Used to test if \hyperlink{class_clock_1_1_time_stamp}{Time\+Stamp} is greater than or equal to another \hyperlink{class_clock_1_1_time_stamp}{Time\+Stamp}. 
+\begin{DoxyParams}{Parameters}
+{\em rhs} & is a \hyperlink{class_clock_1_1_duration}{Duration} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\char`\"{}true\char`\"{} if the comparison is true otherwise return \char`\"{}false\char`\"{} 
+\end{DoxyReturn}
+
+
+\subsection{Friends And Related Function Documentation}
+\index{Clock\+::\+Time\+Stamp@{Clock\+::\+Time\+Stamp}!operator+@{operator+}}
+\index{operator+@{operator+}!Clock\+::\+Time\+Stamp@{Clock\+::\+Time\+Stamp}}
+\subsubsection[{\texorpdfstring{operator+}{operator+}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Clock\+::\+Time\+Stamp} operator+ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Clock\+::\+Time\+Stamp} \&}]{lhs, }
+\item[{const {\bf Clock\+::\+Duration} \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\hypertarget{class_clock_1_1_time_stamp_a0c03a6eab08831e78e238ba6498c40a7}{}\label{class_clock_1_1_time_stamp_a0c03a6eab08831e78e238ba6498c40a7}
+The operator +
+
+Used to add a \hyperlink{class_clock_1_1_duration}{Duration} to a \hyperlink{class_clock_1_1_time_stamp}{Time\+Stamp} 
+\begin{DoxyParams}{Parameters}
+{\em lhs} & is a \hyperlink{class_clock_1_1_time_stamp}{Clock\+::\+Time\+Stamp} \\
+\hline
+{\em d} & is a \hyperlink{class_clock_1_1_duration}{Clock\+::\+Duration} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{class_clock_1_1_time_stamp}{Clock\+::\+Time\+Stamp} object with the changed value 
+\end{DoxyReturn}
+\index{Clock\+::\+Time\+Stamp@{Clock\+::\+Time\+Stamp}!operator+@{operator+}}
+\index{operator+@{operator+}!Clock\+::\+Time\+Stamp@{Clock\+::\+Time\+Stamp}}
+\subsubsection[{\texorpdfstring{operator+}{operator+}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Clock\+::\+Time\+Stamp} operator+ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Clock\+::\+Duration} \&}]{lhs, }
+\item[{const {\bf Clock\+::\+Time\+Stamp} \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\hypertarget{class_clock_1_1_time_stamp_a829ab58b50ec9125fe832b4dfad2cea4}{}\label{class_clock_1_1_time_stamp_a829ab58b50ec9125fe832b4dfad2cea4}
+The operator +(plus)
+
+Used to add a \hyperlink{class_clock_1_1_duration}{Duration} to a \hyperlink{class_clock_1_1_time_stamp}{Time\+Stamp} 
+\begin{DoxyParams}{Parameters}
+{\em lhs} & is a \hyperlink{class_clock_1_1_duration}{Clock\+::\+Duration} \\
+\hline
+{\em rhs} & is a \hyperlink{class_clock_1_1_time_stamp}{Clock\+::\+Time\+Stamp} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{class_clock_1_1_time_stamp}{Clock\+::\+Time\+Stamp} object with the changed value 
+\end{DoxyReturn}
+\index{Clock\+::\+Time\+Stamp@{Clock\+::\+Time\+Stamp}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!Clock\+::\+Time\+Stamp@{Clock\+::\+Time\+Stamp}}
+\subsubsection[{\texorpdfstring{operator+=}{operator+=}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Clock\+::\+Time\+Stamp}\& operator+= (
+\begin{DoxyParamCaption}
+\item[{{\bf Clock\+::\+Time\+Stamp} \&}]{lhs, }
+\item[{const {\bf Clock\+::\+Duration} \&}]{d}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\hypertarget{class_clock_1_1_time_stamp_a4ba2a6872ed75f179345c471182c67dc}{}\label{class_clock_1_1_time_stamp_a4ba2a6872ed75f179345c471182c67dc}
+The operator +=
+
+Used to add and assign a \hyperlink{class_clock_1_1_duration}{Duration} to a \hyperlink{class_clock_1_1_time_stamp}{Time\+Stamp} 
+\begin{DoxyParams}{Parameters}
+{\em lhs} & is a \hyperlink{class_clock_1_1_time_stamp}{Clock\+::\+Time\+Stamp} \\
+\hline
+{\em d} & is a \hyperlink{class_clock_1_1_duration}{Clock\+::\+Duration} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+lhs which is a \hyperlink{class_clock}{Clock}\+:\hyperlink{class_clock_1_1_time_stamp}{Time\+Stamp} 
+\end{DoxyReturn}
+\index{Clock\+::\+Time\+Stamp@{Clock\+::\+Time\+Stamp}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!Clock\+::\+Time\+Stamp@{Clock\+::\+Time\+Stamp}}
+\subsubsection[{\texorpdfstring{operator-\/}{operator-}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Clock\+::\+Time\+Stamp} operator-\/ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Clock\+::\+Time\+Stamp} \&}]{lhs, }
+\item[{const {\bf Clock\+::\+Duration} \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\hypertarget{class_clock_1_1_time_stamp_ac693b02ffb2e0b8b9c402642f7f0169f}{}\label{class_clock_1_1_time_stamp_ac693b02ffb2e0b8b9c402642f7f0169f}
+The operator -\/
+
+Used to substract a \hyperlink{class_clock_1_1_time_stamp}{Time\+Stamp} with a \hyperlink{class_clock_1_1_duration}{Duration} 
+\begin{DoxyParams}{Parameters}
+{\em lhs} & is a \hyperlink{class_clock_1_1_duration}{Clock\+::\+Duration} \\
+\hline
+{\em rhs} & is a \hyperlink{class_clock_1_1_time_stamp}{Clock\+::\+Time\+Stamp} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{class_clock_1_1_time_stamp}{Clock\+::\+Time\+Stamp} object with the changed value 
+\end{DoxyReturn}
+\index{Clock\+::\+Time\+Stamp@{Clock\+::\+Time\+Stamp}!operator-\/=@{operator-\/=}}
+\index{operator-\/=@{operator-\/=}!Clock\+::\+Time\+Stamp@{Clock\+::\+Time\+Stamp}}
+\subsubsection[{\texorpdfstring{operator-\/=}{operator-=}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Clock\+::\+Time\+Stamp}\& operator-\/= (
+\begin{DoxyParamCaption}
+\item[{{\bf Clock\+::\+Time\+Stamp} \&}]{lhs, }
+\item[{const {\bf Clock\+::\+Duration} \&}]{d}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\hypertarget{class_clock_1_1_time_stamp_ae528b7884dfc30e2a28f00c07aa20d24}{}\label{class_clock_1_1_time_stamp_ae528b7884dfc30e2a28f00c07aa20d24}
+The operator -\/=
+
+Used to substract and assign a \hyperlink{class_clock_1_1_time_stamp}{Time\+Stamp} with a \hyperlink{class_clock_1_1_duration}{Duration} 
+\begin{DoxyParams}{Parameters}
+{\em lhs} & is a \hyperlink{class_clock_1_1_time_stamp}{Clock\+::\+Time\+Stamp} \\
+\hline
+{\em d} & is a \hyperlink{class_clock_1_1_duration}{Clock\+::\+Duration} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+lhs which is a \hyperlink{class_clock}{Clock}\+:\hyperlink{class_clock_1_1_time_stamp}{Time\+Stamp} 
+\end{DoxyReturn}
+\index{Clock\+::\+Time\+Stamp@{Clock\+::\+Time\+Stamp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Clock\+::\+Time\+Stamp@{Clock\+::\+Time\+Stamp}}
+\subsubsection[{\texorpdfstring{operator$<$$<$}{operator<<}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{s, }
+\item[{const {\bf Clock\+::\+Time\+Stamp} \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\hypertarget{class_clock_1_1_time_stamp_a9201b9995d10f34386b474b72ec36407}{}\label{class_clock_1_1_time_stamp_a9201b9995d10f34386b474b72ec36407}
+The operator $<$$<$ for \hyperlink{class_clock_1_1_time_stamp}{Clock\+::\+Time\+Stamp}
+
+Used to shift a \hyperlink{class_clock_1_1_time_stamp}{Time\+Stamp} in an ostream 
+\begin{DoxyParams}{Parameters}
+{\em s} & is a std\+::ostream \\
+\hline
+{\em rhs} & is a \hyperlink{class_clock_1_1_time_stamp}{Clock\+::\+Time\+Stamp} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+s which is a std\+::ostream 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+source/include/Clock.\+hpp\item 
+source/src/Clock.\+cpp\end{DoxyCompactItemize}

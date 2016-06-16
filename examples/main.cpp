@@ -1,4 +1,4 @@
-#include "../source/include/clock.hpp"
+#include "../source/include/Clock.hpp"
 #include <iostream>
 #include <unistd.h>
 
